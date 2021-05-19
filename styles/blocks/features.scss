@@ -1,0 +1,47 @@
+section.features {
+  background: linear-gradient(180deg, #edbe16 0%, #eda00b 100%);
+  padding: 180px 0;
+  .features-inside {
+    display: flex;
+    flex-direction: column;
+  }
+  .feature-block {
+    &:first-of-type {
+      background-image: url("../assets/features-1.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      padding-bottom: 600px;
+    }
+    &:last-of-type {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      .feature-text {
+        text-align: right;
+        p {
+          margin-bottom: 100px;
+        }
+        img {
+          margin-right: 100px;
+        }
+      }
+    }
+    .feature-text {
+      h1 {
+        font-family: "Balsamiq Sans Regular";
+        font-weight: 700;
+        font-size: 72px;
+        color: #fff;
+        line-height: 72px;
+        margin-bottom: 30px;
+        @include stroke(#000, 5px);
+      }
+      p {
+        font-family: "Balsamiq Sans Regular";
+        color: #fff;
+        font-size: 18px;
+        line-height: 25px;
+      }
+    }
+  }
+}

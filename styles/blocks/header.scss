@@ -1,0 +1,180 @@
+.page-header {
+  background-image: url("../assets/header-bg.jpg");
+  background-size: cover;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  padding-bottom: 550px;
+  // .header-inside {
+  //   position: relative;
+  // }
+  // & > .wave {
+  //   position: absolute;
+  //   bottom: -20px;
+  //   left: 0;
+  //   width: 100vw;
+  //   path {
+  //     width: 100% !important;
+  //   }
+  //   // background-repeat: no-repeat;
+  //   // height: 427px;
+  //   // background-image: url("../assets/wave-up.svg");
+  //   // background-size: 100% 100%;
+  // }
+  div.wave {
+    position: absolute;
+    bottom: -110px;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background: url("../assets/wave-up.svg");
+    background-size: cover;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("../assets/wave-up-blue.svg");
+      background-size: cover;
+      opacity: 0;
+    }
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(51, 51, 51, 0.68);
+    // background: rgba(51, 51, 51, 0.58);
+    z-index: -1;
+  }
+  .header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 25px;
+    .nav-left {
+      width: 485px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      a {
+        font-family: "Balsamiq Sans Regular";
+        color: #fff;
+        font-size: 18px;
+        text-decoration: none;
+      }
+      img {
+        margin-right: 100px;
+      }
+    }
+    .nav-right {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .download-button {
+        font-family: "Balsamiq Sans Regular";
+        padding: 20px 32px;
+        background: transparent;
+        border: none;
+        outline: none;
+        color: #fff;
+        border: 2px solid #fff;
+        border-radius: 10px;
+        height: 62px;
+        margin-right: 27px;
+      }
+      .registration-button {
+        transition: box-shadow 0.3s ease-in-out;
+        &:focus {
+          background: #ffdc30;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+  .header-main {
+    margin-top: 230px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .header-text {
+      button {
+        transition: box-shadow 0.3s ease-in-out;
+        &:focus {
+          // transition: all 0.3s ease-in-out;
+          background: #ffdc30;
+          box-shadow: none;
+        }
+      }
+      h1 {
+        font-family: "Balsamiq Sans Regular";
+        font-weight: 700;
+        font-size: 72px;
+        color: #fff;
+        line-height: 72px;
+        @include stroke(#000, 5px);
+        margin-bottom: 32px;
+        img {
+          vertical-align: bottom;
+          // text-shadow: 0px 0px 13px rgba(255, 200, 41, 0.38);
+          filter: drop-shadow(0px 0px 13px rgba(255, 200, 31, 0.38));
+        }
+      }
+      p {
+        font-family: "Balsamiq Sans Regular";
+        font-size: 18px;
+        line-height: 25px;
+        color: #fff;
+        max-width: 335px;
+        margin-bottom: 54px;
+      }
+    }
+  }
+  .cards {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    max-width: 1215px;
+    width: 100%;
+    z-index: 10;
+    li {
+      background: #423b2b;
+      border: 7px solid #5d5347;
+      border-radius: 14px;
+      list-style: none;
+      font-family: "Balsamiq Sans Regular";
+      color: #ffffff;
+      text-align: center;
+      padding: 0 32px;
+      padding-bottom: 30px;
+      position: relative;
+      max-height: 256px;
+      width: 32%;
+      box-sizing: border-box;
+      p {
+        position: absolute;
+        left: 32px;
+        bottom: 30px;
+        text-align: left;
+      }
+      img {
+        position: relative;
+        top: -25px;
+        left: 0;
+      }
+      &:first-child {
+        img {
+          left: -30px;
+          top: -120px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,249 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.center {
+  max-width: 1215px;
+  margin: 0 auto;
+}
+
+.yellow-button {
+  padding: 20px 37px;
+  font-family: "Balsamiq Sans Regular";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 120%;
+  text-align: center;
+  color: #ffffff;
+  border: 1px solid #000000;
+  border: none;
+  outline: none;
+  background: #ffdc30;
+  box-shadow: inset -8px -30px 15px 5px rgba(247, 171, 22, 0.5);
+  border-radius: 10px;
+  text-shadow: 2px 0px 0 #000, 1.8478px 0.7654px 0 #000, 1.4142px 1.4142px 0 #000, 0.7654px 1.8478px 0 #000, 0px 2px 0 #000, -0.7654px 1.8478px 0 #000, -1.4142px 1.4142px 0 #000, -1.8478px 0.7654px 0 #000, -2px 0px 0 #000, -1.8478px -0.7654px 0 #000, -1.4142px -1.4142px 0 #000, -0.7654px -1.8478px 0 #000, 0px -2px 0 #000, 0.7654px -1.8478px 0 #000, 1.4142px -1.4142px 0 #000, 1.8478px -0.7654px 0 #000;
+}
+.yellow-button:hover {
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: "Balsamiq Sans Regular";
+  src: url("../assets/fonts/balsamiq/BalsamiqSans-Regular.ttf");
+}
+@font-face {
+  font-family: "Balsamiq Sans Bold";
+  src: url("../assets/fonts/balsamiq/BalsamiqSans-Bold.ttf");
+}
+@font-face {
+  font-family: "Montserrat Regular";
+  src: url("../assets/fonts/montserrat/Montserrat-Regular.ttf");
+}
+@font-face {
+  font-family: "Montserrat Bold";
+  src: url("../assets/fonts/montserrat/Montserrat-Bold.ttf");
+}
+.page-header {
+  background-image: url("../assets/header-bg.jpg");
+  background-size: cover;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  padding-bottom: 550px;
+}
+.page-header div.wave {
+  position: absolute;
+  bottom: -110px;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  background: url("../assets/wave-up.svg");
+  background-size: cover;
+}
+.page-header div.wave::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/wave-up-blue.svg");
+  background-size: cover;
+  opacity: 0;
+}
+.page-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(51, 51, 51, 0.68);
+  z-index: -1;
+}
+.page-header .header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 25px;
+}
+.page-header .header-nav .nav-left {
+  width: 485px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.page-header .header-nav .nav-left a {
+  font-family: "Balsamiq Sans Regular";
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+}
+.page-header .header-nav .nav-left img {
+  margin-right: 100px;
+}
+.page-header .header-nav .nav-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.page-header .header-nav .nav-right .download-button {
+  font-family: "Balsamiq Sans Regular";
+  padding: 20px 32px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  height: 62px;
+  margin-right: 27px;
+}
+.page-header .header-nav .nav-right .registration-button {
+  transition: box-shadow 0.3s ease-in-out;
+}
+.page-header .header-nav .nav-right .registration-button:focus {
+  background: #ffdc30;
+  box-shadow: none;
+}
+.page-header .header-main {
+  margin-top: 230px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.page-header .header-main .header-text button {
+  transition: box-shadow 0.3s ease-in-out;
+}
+.page-header .header-main .header-text button:focus {
+  background: #ffdc30;
+  box-shadow: none;
+}
+.page-header .header-main .header-text h1 {
+  font-family: "Balsamiq Sans Regular";
+  font-weight: 700;
+  font-size: 72px;
+  color: #fff;
+  line-height: 72px;
+  text-shadow: 5px 0px 0 #000, 4.6195px 1.9135px 0 #000, 3.5355px 3.5355px 0 #000, 1.9135px 4.6195px 0 #000, 0px 5px 0 #000, -1.9135px 4.6195px 0 #000, -3.5355px 3.5355px 0 #000, -4.6195px 1.9135px 0 #000, -5px 0px 0 #000, -4.6195px -1.9135px 0 #000, -3.5355px -3.5355px 0 #000, -1.9135px -4.6195px 0 #000, 0px -5px 0 #000, 1.9135px -4.6195px 0 #000, 3.5355px -3.5355px 0 #000, 4.6195px -1.9135px 0 #000;
+  margin-bottom: 32px;
+}
+.page-header .header-main .header-text h1 img {
+  vertical-align: bottom;
+  filter: drop-shadow(0px 0px 13px rgba(255, 200, 31, 0.38));
+}
+.page-header .header-main .header-text p {
+  font-family: "Balsamiq Sans Regular";
+  font-size: 18px;
+  line-height: 25px;
+  color: #fff;
+  max-width: 335px;
+  margin-bottom: 54px;
+}
+.page-header .cards {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  max-width: 1215px;
+  width: 100%;
+  z-index: 10;
+}
+.page-header .cards li {
+  background: #423b2b;
+  border: 7px solid #5d5347;
+  border-radius: 14px;
+  list-style: none;
+  font-family: "Balsamiq Sans Regular";
+  color: #ffffff;
+  text-align: center;
+  padding: 0 32px;
+  padding-bottom: 30px;
+  position: relative;
+  max-height: 256px;
+  width: 32%;
+  box-sizing: border-box;
+}
+.page-header .cards li p {
+  position: absolute;
+  left: 32px;
+  bottom: 30px;
+  text-align: left;
+}
+.page-header .cards li img {
+  position: relative;
+  top: -25px;
+  left: 0;
+}
+.page-header .cards li:first-child img {
+  left: -30px;
+  top: -120px;
+}
+
+section.features {
+  background: linear-gradient(180deg, #edbe16 0%, #eda00b 100%);
+  padding: 180px 0;
+}
+section.features .features-inside {
+  display: flex;
+  flex-direction: column;
+}
+section.features .feature-block:first-of-type {
+  background-image: url("../assets/features-1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding-bottom: 600px;
+}
+section.features .feature-block:last-of-type {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+section.features .feature-block:last-of-type .feature-text {
+  text-align: right;
+}
+section.features .feature-block:last-of-type .feature-text p {
+  margin-bottom: 100px;
+}
+section.features .feature-block:last-of-type .feature-text img {
+  margin-right: 100px;
+}
+section.features .feature-block .feature-text h1 {
+  font-family: "Balsamiq Sans Regular";
+  font-weight: 700;
+  font-size: 72px;
+  color: #fff;
+  line-height: 72px;
+  margin-bottom: 30px;
+  text-shadow: 5px 0px 0 #000, 4.6195px 1.9135px 0 #000, 3.5355px 3.5355px 0 #000, 1.9135px 4.6195px 0 #000, 0px 5px 0 #000, -1.9135px 4.6195px 0 #000, -3.5355px 3.5355px 0 #000, -4.6195px 1.9135px 0 #000, -5px 0px 0 #000, -4.6195px -1.9135px 0 #000, -3.5355px -3.5355px 0 #000, -1.9135px -4.6195px 0 #000, 0px -5px 0 #000, 1.9135px -4.6195px 0 #000, 3.5355px -3.5355px 0 #000, 4.6195px -1.9135px 0 #000;
+}
+section.features .feature-block .feature-text p {
+  font-family: "Balsamiq Sans Regular";
+  color: #fff;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+/*# sourceMappingURL=style.css.map */

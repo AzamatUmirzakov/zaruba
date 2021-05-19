@@ -1,0 +1,74 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.center {
+  max-width: 1215px;
+  margin: 0 auto;
+}
+
+@mixin stroke($color, $width) {
+  text-shadow: ($width * 1) ($width * 0) 0 $color,
+    ($width * 0.9239) ($width * 0.3827) 0 $color,
+    ($width * 0.7071) ($width * 0.7071) 0 $color,
+    ($width * 0.3827) ($width * 0.9239) 0 $color,
+    ($width * 0) ($width * 1) 0 $color,
+    ($width * -0.3827) ($width * 0.9239) 0 $color,
+    ($width * -0.7071) ($width * 0.7071) 0 $color,
+    ($width * -0.9239) ($width * 0.3827) 0 $color,
+    ($width * -1) ($width * 0) 0 $color,
+    ($width * -0.9239) ($width * -0.3827) 0 $color,
+    ($width * -0.7071) ($width * -0.7071) 0 $color,
+    ($width * -0.3827) ($width * -0.9239) 0 $color,
+    ($width * 0) ($width * -1) 0 $color,
+    ($width * 0.3827) ($width * -0.9239) 0 $color,
+    ($width * 0.7071) ($width * -0.7071) 0 $color,
+    ($width * 0.9239) ($width * -0.3827) 0 $color;
+}
+
+.yellow-button {
+  &:hover {
+    cursor: pointer;
+  }
+  padding: 20px 37px;
+  font-family: "Balsamiq Sans Regular";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 120%;
+  text-align: center;
+
+  color: #ffffff;
+
+  border: 1px solid #000000;
+  // text-shadow: 0px 0px 1px #000000;
+  // text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+  //   1px 1px 0 #000;
+  // -webkit-text-stroke: 0.1px #000;
+  border: none;
+  outline: none;
+  background: #ffdc30;
+  box-shadow: inset -8px -30px 15px 5px rgba(247, 171, 22, 0.5);
+  border-radius: 10px;
+  @include stroke(#000, 2px);
+}
+
+@font-face {
+  font-family: "Balsamiq Sans Regular";
+  src: url("../assets/fonts/balsamiq/BalsamiqSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Balsamiq Sans Bold";
+  src: url("../assets/fonts/balsamiq/BalsamiqSans-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Montserrat Regular";
+  src: url("../assets/fonts/montserrat/Montserrat-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Montserrat Bold";
+  src: url("../assets/fonts/montserrat/Montserrat-Bold.ttf");
+}
