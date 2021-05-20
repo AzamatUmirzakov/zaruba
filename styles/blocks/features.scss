@@ -1,11 +1,15 @@
 section.features {
   background: linear-gradient(180deg, #edbe16 0%, #eda00b 100%);
+  background-size: cover;
   padding: 180px 0;
+  position: relative;
+  z-index: 10;
   .features-inside {
     display: flex;
     flex-direction: column;
   }
   .feature-block {
+    z-index: 20;
     &:first-of-type {
       background-image: url("../assets/features-1.png");
       background-size: contain;

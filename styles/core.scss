@@ -28,8 +28,13 @@
 }
 
 .yellow-button {
-  &:hover {
+  transition: all 0.3s ease-in-out;
+  letter-spacing: 1.5px;
+  &:hover,
+  &:focus {
     cursor: pointer;
+    background: #ffdc30;
+    box-shadow: none;
   }
   padding: 20px 37px;
   font-family: "Balsamiq Sans Regular";
@@ -37,18 +42,14 @@
   font-size: 18px;
   line-height: 120%;
   text-align: center;
-
   color: #ffffff;
 
   border: 1px solid #000000;
-  // text-shadow: 0px 0px 1px #000000;
-  // text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-  //   1px 1px 0 #000;
-  // -webkit-text-stroke: 0.1px #000;
   border: none;
   outline: none;
   background: #ffdc30;
-  box-shadow: inset -8px -30px 15px 5px rgba(247, 171, 22, 0.5);
+  box-shadow: inset 15px 0px 10px 0px #ffdc30,
+    inset -8px -30px 10px 5px rgba(247, 171, 22, 0.6);
   border-radius: 10px;
   @include stroke(#000, 2px);
 }
@@ -71,4 +72,77 @@
 @font-face {
   font-family: "Montserrat Bold";
   src: url("../assets/fonts/montserrat/Montserrat-Bold.ttf");
+}
+
+.popup {
+  z-index: 20;
+  position: fixed;
+  padding: 35px 40px 40px 40px;
+  background: #423b2b;
+  border: 7px solid #5d5347;
+  max-width: 405px;
+  border-radius: 14px;
+  h1 {
+    font-family: "Balsamiq Sans Regular";
+    font-size: 24px;
+    line-height: 29px;
+    color: #fff;
+    margin-bottom: 30px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    label {
+      display: flex;
+      flex-direction: column;
+      font-family: "Balsamiq Sans Regular";
+      font-size: 18px;
+      line-height: 22px;
+      color: #fff;
+      &:not(:last-of-type) {
+        margin-bottom: 20px;
+      }
+      input {
+        margin-top: 10px;
+        padding: 16px 22px;
+        border: none;
+        outline: none;
+        background: #fff;
+        color: #000;
+        font-family: "Balsamiq Sans Regular";
+        font-size: 18px;
+        border-radius: 10px;
+        &::placeholder {
+          color: #96948b;
+          font-family: "Balsamiq Sans Regular";
+          font-size: 18px;
+        }
+      }
+    }
+    .yellow-button {
+      margin-top: 40px;
+    }
+  }
+}
+
+.popup-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(180deg, #6130ee 0%, #320aa6 100%), #6130ee;
+  opacity: 0.5;
+  z-index: 15;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(18, 7, 43, 0.8);
+    z-index: 10;
+  }
+  backdrop-filter: blur(20px);
 }

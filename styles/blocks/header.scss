@@ -2,44 +2,18 @@
   background-image: url("../assets/header-bg.jpg");
   background-size: cover;
   position: relative;
-  z-index: 2;
+  z-index: 15;
   overflow: hidden;
   padding-bottom: 550px;
-  // .header-inside {
-  //   position: relative;
-  // }
-  // & > .wave {
-  //   position: absolute;
-  //   bottom: -20px;
-  //   left: 0;
-  //   width: 100vw;
-  //   path {
-  //     width: 100% !important;
-  //   }
-  //   // background-repeat: no-repeat;
-  //   // height: 427px;
-  //   // background-image: url("../assets/wave-up.svg");
-  //   // background-size: 100% 100%;
-  // }
   div.wave {
     position: absolute;
-    bottom: -110px;
+    bottom: -1px;
     left: 0;
     width: 100%;
-    height: 30%;
+    height: 335px;
     background: url("../assets/wave-up.svg");
     background-size: cover;
-    &::before {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: url("../assets/wave-up-blue.svg");
-      background-size: cover;
-      opacity: 0;
-    }
+    background-repeat: no-repeat;
   }
   &::before {
     content: "";
@@ -68,7 +42,7 @@
         font-size: 18px;
         text-decoration: none;
       }
-      img {
+      a.nav-logo {
         margin-right: 100px;
       }
     }
@@ -86,13 +60,10 @@
         border: 2px solid #fff;
         border-radius: 10px;
         height: 62px;
+        font-size: 18px;
         margin-right: 27px;
-      }
-      .registration-button {
-        transition: box-shadow 0.3s ease-in-out;
-        &:focus {
-          background: #ffdc30;
-          box-shadow: none;
+        &:hover {
+          cursor: pointer;
         }
       }
     }
