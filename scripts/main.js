@@ -23,6 +23,12 @@ function adaptivity() {
       item.style.paddingLeft = margin;
       item.style.paddingRight = margin;
     }
+  else {
+    for (let item of document.querySelectorAll(".feature-block")) {
+      item.style.paddingLeft = "0px";
+      item.style.paddingRight = "0px";
+    }
+  }
 }
 
 setInterval(adaptivity, 100);
