@@ -1,14 +1,32 @@
-// centering cards
-let cards = document.querySelector("ul.cards");
+function adaptivity() {
+  // centering cards
+  let cards = document.querySelector("ul.cards");
 
-let margin = getComputedStyle(document.querySelector(".center")).marginLeft;
+  let margin = getComputedStyle(document.querySelector(".center")).marginLeft;
 
-cards.style.left = margin;
+  // cards.style.left = margin;
 
-for (let item of document.querySelectorAll(".feature-block")) {
-  item.style.paddingLeft = margin;
-  item.style.paddingRight = margin;
+  cards.style.top = `-${
+    parseFloat(getComputedStyle(cards.firstElementChild).height) +
+    parseFloat(getComputedStyle(cards.parentElement.parentElement).paddingTop)
+  }px`;
+
+  for (let li of cards.children) {
+    let img = li.querySelector("img");
+    img.style.left = `calc(50% - ${
+      parseFloat(getComputedStyle(img).width) / 2
+    }px`;
+  }
+
+  if (document.documentElement.clientWidth > 1270)
+    for (let item of document.querySelectorAll(".feature-block")) {
+      item.style.paddingLeft = margin;
+      item.style.paddingRight = margin;
+    }
 }
+
+setInterval(adaptivity, 100);
+adaptivity();
 
 // registration button
 
@@ -21,8 +39,8 @@ for (let button of registration_buttons) {
 }
 
 function show_popup() {
-  function keydown_listener(e) {
-    if (e.code == "Escape") {
+  function click_listener(e) {
+    if (!popup.contains(e.target)) {
       document.body.style.overflow = "";
       document.querySelector(".popup").remove();
       document.querySelector(".popup-bg").remove();
@@ -32,31 +50,29 @@ function show_popup() {
         // child.style.margin = "";
       }
       document.querySelector(".features").style.background =
-        "linear-gradient(180deg, #edbe16 0%, #eda00b 100%)";
+        "linear-gradient(180deg, #edb613 0%, #eda00b 100%)";
 
-      document.querySelector(".wave").style.backgroundImage =
-        "url('assets/wave-up.svg')";
-      document.removeEventListener("keydown", keydown_listener);
-      Array.from(document.querySelectorAll(".wave"))[1].style.backgroundImage =
-        "url('assets/wave-bottom.svg')";
+      document.querySelector(".wave img").src = "assets/wave-up.png";
+      document.removeEventListener("click", click_listener);
+      Array.from(document.querySelectorAll(".wave"))[1].querySelector(
+        "img"
+      ).src = "assets/wave-bottom.svg";
       document.querySelector(".page-footer").style.background = "#eda00b";
     }
   }
-  document.addEventListener("keydown", keydown_listener);
   document.body.style.overflow = "hidden";
   let popup = document.createElement("div");
   popup.className = "popup";
   popup.id = "unblurred";
 
-  document.querySelector(".wave").style.backgroundImage =
-    "url('assets/wave-up-blue.svg')";
+  document.querySelector(".wave img").src = "assets/wave-up-blue.png";
 
-  document.querySelector(".features").style.background = "#2d1371";
+  document.querySelector(".features").style.background = "#250f5e";
   // document.querySelector(".features").style.background = "#26105f";
 
   document.querySelector(".page-footer").style.background = "#2d1371";
-  Array.from(document.querySelectorAll(".wave"))[1].style.backgroundImage =
-    "url('assets/wave-bottom-blue.svg')";
+  Array.from(document.querySelectorAll(".wave"))[1].querySelector("img").src =
+    "assets/wave-bottom-blue.svg";
 
   for (let child of document.body.children) {
     if (child.id != "unblurred") {
@@ -107,4 +123,7 @@ function show_popup() {
     document.documentElement.clientWidth / 2 - popup.offsetWidth / 2 + "px";
   popup.style.top =
     document.documentElement.clientHeight / 2 - popup.offsetHeight / 2 + "px";
+  setTimeout(() => {
+    document.addEventListener("click", click_listener);
+  }, 0);
 }

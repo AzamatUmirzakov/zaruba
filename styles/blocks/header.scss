@@ -7,13 +7,22 @@
   padding-bottom: 550px;
   div.wave {
     position: absolute;
-    bottom: -1px;
+    bottom: -10px;
     left: 0;
     width: 100%;
-    height: 335px;
-    background: url("../assets/wave-up.svg");
-    background-size: cover;
-    background-repeat: no-repeat;
+    height: 420px;
+    // height: 50%;
+    // max-height: ;
+    // height: 30%;
+    // background: url("../assets/wave-up.svg");
+    // background-size: cover;
+    // background-repeat: no-repeat;
+    // background-position: bottom center;
+    z-index: 10;
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
   &::before {
     content: "";
@@ -31,6 +40,9 @@
     justify-content: space-between;
     align-items: center;
     padding-top: 25px;
+    .nav-adaptive {
+      display: none;
+    }
     .nav-left {
       width: 485px;
       display: flex;
@@ -75,6 +87,8 @@
     align-items: center;
     .header-text {
       button {
+        z-index: 20;
+        position: relative;
         transition: box-shadow 0.3s ease-in-out;
         &:focus {
           // transition: all 0.3s ease-in-out;
@@ -88,9 +102,12 @@
         font-size: 72px;
         color: #fff;
         line-height: 72px;
-        @include stroke(#000, 5px);
+        @include stroke(#000, 5px, 2px);
         margin-bottom: 32px;
         img {
+          &:first-of-type {
+            display: none;
+          }
           vertical-align: bottom;
           // text-shadow: 0px 0px 13px rgba(255, 200, 41, 0.38);
           filter: drop-shadow(0px 0px 13px rgba(255, 200, 31, 0.38));
@@ -104,47 +121,8 @@
         max-width: 335px;
         margin-bottom: 54px;
       }
-    }
-  }
-  .cards {
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    max-width: 1215px;
-    width: 100%;
-    z-index: 10;
-    li {
-      background: #423b2b;
-      border: 7px solid #5d5347;
-      border-radius: 14px;
-      list-style: none;
-      font-family: "Balsamiq Sans Regular";
-      color: #ffffff;
-      text-align: center;
-      padding: 0 32px;
-      padding-bottom: 30px;
-      position: relative;
-      max-height: 256px;
-      width: 32%;
-      box-sizing: border-box;
-      p {
-        position: absolute;
-        left: 32px;
-        bottom: 30px;
-        text-align: left;
-      }
-      img {
-        position: relative;
-        top: -25px;
-        left: 0;
-      }
-      &:first-child {
-        img {
-          left: -30px;
-          top: -120px;
-        }
+      .download-button {
+        display: none;
       }
     }
   }

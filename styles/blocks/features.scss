@@ -1,12 +1,62 @@
 section.features {
-  background: linear-gradient(180deg, #edbe16 0%, #eda00b 100%);
+  background: linear-gradient(180deg, #edb613 0%, #eda00b 100%);
   background-size: cover;
   padding: 180px 0;
   position: relative;
-  z-index: 10;
+  z-index: 20;
   .features-inside {
     display: flex;
     flex-direction: column;
+    position: relative;
+    z-index: 20;
+    .cards {
+      z-index: 20;
+      position: absolute;
+      display: flex;
+      justify-content: space-between;
+      // max-width: 1215px;
+      width: 100%;
+      z-index: 10;
+      left: 0;
+      right: 0;
+      li {
+        background: #423b2b;
+        border: 7px solid #5d5347;
+        border-radius: 14px;
+        list-style: none;
+        font-family: "Balsamiq Sans Regular";
+        color: #ffffff;
+        text-align: center;
+        padding: 0 32px;
+        padding-bottom: 30px;
+        position: relative;
+        max-height: 256px;
+        width: 32%;
+        box-sizing: border-box;
+        padding-top: 176px;
+        display: flex;
+        align-items: flex-end;
+        z-index: 20;
+        p {
+          // position: absolute;
+          // left: 32px;
+          // bottom: 30px;
+          text-align: left;
+        }
+        img {
+          position: absolute;
+          top: -25px;
+          left: 0;
+          z-index: 20;
+        }
+        &:first-child {
+          img {
+            left: -30px;
+            top: -120px;
+          }
+        }
+      }
+    }
   }
   .feature-block {
     z-index: 20;
@@ -14,7 +64,13 @@ section.features {
       background-image: url("../assets/features-1.png");
       background-size: contain;
       background-repeat: no-repeat;
-      padding-bottom: 600px;
+      padding-bottom: 500px;
+      img {
+        display: none;
+      }
+    }
+    img {
+      max-width: 80%;
     }
     &:last-of-type {
       display: flex;
@@ -27,6 +83,8 @@ section.features {
         }
         img {
           margin-right: 100px;
+          box-sizing: border-box;
+          max-width: 80%;
         }
       }
     }
@@ -38,7 +96,7 @@ section.features {
         color: #fff;
         line-height: 72px;
         margin-bottom: 30px;
-        @include stroke(#000, 5px);
+        @include stroke(#000, 5px, 2px);
       }
       p {
         font-family: "Balsamiq Sans Regular";

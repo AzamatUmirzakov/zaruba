@@ -3,6 +3,10 @@
   margin: 0;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .center {
   max-width: 1215px;
   margin: 0 auto;
@@ -10,7 +14,6 @@
 
 .yellow-button {
   transition: all 0.3s ease-in-out;
-  letter-spacing: 1.5px;
   padding: 20px 37px;
   font-family: "Balsamiq Sans Regular";
   font-weight: 700;
@@ -24,7 +27,7 @@
   background: #ffdc30;
   box-shadow: inset 15px 0px 10px 0px #ffdc30, inset -8px -30px 10px 5px rgba(247, 171, 22, 0.6);
   border-radius: 10px;
-  text-shadow: 2px 0px 0 #000, 1.8478px 0.7654px 0 #000, 1.4142px 1.4142px 0 #000, 0.7654px 1.8478px 0 #000, 0px 2px 0 #000, -0.7654px 1.8478px 0 #000, -1.4142px 1.4142px 0 #000, -1.8478px 0.7654px 0 #000, -2px 0px 0 #000, -1.8478px -0.7654px 0 #000, -1.4142px -1.4142px 0 #000, -0.7654px -1.8478px 0 #000, 0px -2px 0 #000, 0.7654px -1.8478px 0 #000, 1.4142px -1.4142px 0 #000, 1.8478px -0.7654px 0 #000;
+  text-shadow: 2px 1px 0 #000, 1.8478px 1.7654px 0 #000, 1.4142px 2.4142px 0 #000, 0.7654px 2.8478px 0 #000, 0px 3px 0 #000, -0.7654px 2.8478px 0 #000, -1.4142px 2.4142px 0 #000, -1.8478px 1.7654px 0 #000, -2px 1px 0 #000, -1.8478px 0.2346px 0 #000, -1.4142px -0.4142px 0 #000, -0.7654px -0.8478px 0 #000, 0px -1px 0 #000, 0.7654px -0.8478px 0 #000, 1.4142px -0.4142px 0 #000, 1.8478px 0.2346px 0 #000;
 }
 .yellow-button:hover, .yellow-button:focus {
   cursor: pointer;
@@ -89,11 +92,18 @@
   font-family: "Balsamiq Sans Regular";
   font-size: 18px;
   border-radius: 10px;
+  border: 3px solid transparent;
 }
 .popup form label input::placeholder {
   color: #96948b;
   font-family: "Balsamiq Sans Regular";
   font-size: 18px;
+}
+.popup form label input:focus {
+  border-color: #98856e;
+}
+.popup form label input:focus::placeholder {
+  color: #fff;
 }
 .popup form .yellow-button {
   margin-top: 40px;
@@ -121,6 +131,335 @@
   z-index: 10;
 }
 
+@media (max-width: 1270px) {
+  .center {
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+}
+@media (max-width: 1070px) {
+  header.page-header {
+    padding-bottom: 150px;
+  }
+  header.page-header div.wave {
+    height: 110px;
+  }
+  header.page-header div.wave img {
+    min-width: 510px;
+  }
+  header.page-header .header-inside .header-nav {
+    padding: 0;
+  }
+  header.page-header .header-inside .header-nav .nav-left,
+header.page-header .header-inside .header-nav .nav-right {
+    display: none !important;
+  }
+  header.page-header .header-inside .header-nav .nav-adaptive {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px 0 16px;
+  }
+  header.page-header .header-inside .header-nav .nav-adaptive button {
+    background: transparent;
+    border: none;
+    outline: none;
+  }
+  header.page-header .header-inside .header-nav .nav-adaptive button:hover {
+    cursor: pointer;
+  }
+  header.page-header .header-inside .header-main {
+    margin-top: 65px;
+    display: flex;
+    justify-content: center;
+  }
+  header.page-header .header-inside .header-main .header-text {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  header.page-header .header-inside .header-main .header-text h1 {
+    font-size: 48px;
+    line-height: 48px;
+    text-align: center;
+    max-width: 310px;
+  }
+  header.page-header .header-inside .header-main .header-text h1 img {
+    display: inline !important;
+    height: 30px;
+    width: 24px;
+    vertical-align: baseline;
+  }
+  header.page-header .header-inside .header-main .header-text p {
+    text-align: center;
+  }
+  header.page-header .header-inside .header-main .header-text .download-button {
+    display: inline-block;
+    background: transparent;
+    color: #fff;
+    border: none;
+    outline: none;
+    margin-top: 40px;
+    font-family: "Balsamiq Sans Regular";
+    font-size: 18px;
+  }
+  header.page-header .header-inside .header-main .header-text .download-button:hover {
+    cursor: pointer;
+  }
+  header.page-header .header-inside .header-main .header-image {
+    display: none;
+  }
+
+  section.features {
+    padding: 0 !important;
+  }
+  section.features .features-inside .feature-block {
+    background-position: bottom center;
+  }
+  section.features .features-inside .feature-block:last-of-type {
+    padding: 0 18px !important;
+    display: flex;
+    align-items: center;
+  }
+  section.features .features-inside .feature-block:last-of-type img {
+    max-width: 50% !important;
+  }
+  section.features .features-inside .feature-block:last-of-type .feature-text {
+    width: 100%;
+    text-align: center;
+  }
+  section.features .features-inside .feature-block:last-of-type .feature-text h1 {
+    margin-bottom: 40px;
+  }
+  section.features .features-inside .feature-block:last-of-type .feature-text p {
+    margin-bottom: 55px;
+  }
+  section.features .features-inside .feature-block:first-of-type {
+    padding-bottom: 200px;
+    margin-bottom: 100px;
+  }
+  section.features .features-inside .feature-block:first-of-type img {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  section.features .features-inside .feature-block:first-of-type img:first-of-type {
+    width: 100%;
+  }
+  section.features .features-inside .feature-block:first-of-type .feature-text {
+    padding-left: 20px;
+  }
+  section.features .features-inside .feature-block:first-of-type .feature-text h1,
+section.features .features-inside .feature-block:first-of-type .feature-text p {
+    text-align: left;
+  }
+  section.features .features-inside .feature-block:first-of-type img:last-of-type {
+    max-width: 100%;
+    filter: drop-shadow(-40px 27px 31px rgba(50, 31, 2, 0.22));
+    padding: 0 18px;
+    box-sizing: border-box;
+  }
+  section.features .features-inside .feature-block .feature-text h1 {
+    font-size: 48px;
+    line-height: 48px;
+    text-align: center;
+  }
+  section.features .features-inside .feature-block .feature-text p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  section.features .features-inside .feature-block img:first-of-type {
+    margin-bottom: 40px;
+  }
+  section.features .features-inside .cards {
+    margin-bottom: 100px;
+    position: static !important;
+    flex-direction: column;
+    padding: 0px 16px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  section.features .features-inside .cards li {
+    width: 100% !important;
+    max-width: 345px;
+    margin-bottom: 35px;
+  }
+  section.features .features-inside .cards li img {
+    max-width: 100%;
+  }
+  section.features .features-inside .cards li p {
+    width: 100%;
+    line-height: 25px;
+    text-align: center !important;
+  }
+
+  section.downloads {
+    background: url("../assets/downloads-bg-adaptive.png") !important;
+    background-size: cover !important;
+  }
+  section.downloads div.wave {
+    background-position: top center !important;
+    background-size: contain !important;
+  }
+  section.downloads .downloads-inside {
+    text-align: center;
+    padding: 0 32px;
+  }
+  section.downloads .downloads-inside > h1 {
+    font-size: 48px;
+    line-height: 48px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  section.downloads .downloads-inside > h1 > img {
+    display: none;
+  }
+  section.downloads .downloads-inside > h1 span:last-of-type img {
+    display: inline !important;
+    width: 24px;
+    height: 30px;
+    vertical-align: baseline;
+  }
+  section.downloads .downloads-inside > h1 span:last-of-type img:first-of-type {
+    margin-right: 10px;
+  }
+  section.downloads .downloads-inside > h1 span:last-of-type img:last-of-type {
+    margin-left: 10px;
+  }
+  section.downloads .downloads-inside header.downloads-header {
+    margin-bottom: 100px;
+  }
+  section.downloads .downloads-inside header.downloads-header h1 {
+    font-family: "Balsamiq Sans Regular";
+    font-size: 48px;
+    color: #fff;
+    line-height: 48px;
+    text-shadow: 5px 2px 0 #000, 4.6195px 3.9135px 0 #000, 3.5355px 5.5355px 0 #000, 1.9135px 6.6195px 0 #000, 0px 7px 0 #000, -1.9135px 6.6195px 0 #000, -3.5355px 5.5355px 0 #000, -4.6195px 3.9135px 0 #000, -5px 2px 0 #000, -4.6195px 0.0865px 0 #000, -3.5355px -1.5355px 0 #000, -1.9135px -2.6195px 0 #000, 0px -3px 0 #000, 1.9135px -2.6195px 0 #000, 3.5355px -1.5355px 0 #000, 4.6195px 0.0865px 0 #000;
+    margin-bottom: 30px;
+  }
+  section.downloads .downloads-inside ul.coins-list {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+  }
+  section.downloads .downloads-inside ul.coins-list li:first-of-type {
+    display: none;
+  }
+  section.downloads .downloads-inside ul.coins-list li:nth-child(2) {
+    margin-bottom: 70px;
+  }
+  section.downloads .downloads-inside ul.coins-list li {
+    max-width: 100%;
+  }
+  section.downloads .downloads-inside ul.coins-list li img {
+    max-width: 100%;
+  }
+  section.downloads .downloads-inside nav.download-links {
+    display: flex;
+    flex-direction: column;
+    max-width: 225px;
+  }
+  section.downloads .downloads-inside nav.download-links div:first-of-type {
+    margin-bottom: 30px;
+  }
+  section.downloads .downloads-inside nav.download-links div div {
+    display: flex;
+    flex-direction: column;
+  }
+  section.downloads .downloads-inside nav.download-links div div a {
+    width: 100%;
+    box-sizing: border-box;
+    margin-right: 0;
+    justify-content: center;
+  }
+  section.downloads .downloads-inside nav.download-links div div a:first-of-type {
+    margin-bottom: 16px;
+  }
+}
+@media (max-width: 720px) {
+  section.features {
+    padding: 0 !important;
+  }
+  section.features .features-inside .feature-block img {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  section.features .features-inside .feature-block img:first-of-type {
+    width: 100%;
+  }
+  section.features .features-inside .feature-block:last-of-type {
+    padding: 0 18px !important;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  section.features .features-inside .feature-block:last-of-type img.features-icon {
+    display: none !important;
+  }
+  section.features .features-inside .feature-block:last-of-type .feature-text {
+    width: 100%;
+    text-align: center;
+  }
+  section.features .features-inside .feature-block:last-of-type .feature-text h1 {
+    margin-bottom: 40px;
+  }
+  section.features .features-inside .feature-block:last-of-type .feature-text p {
+    margin-bottom: 55px;
+  }
+  section.features .features-inside .feature-block:first-of-type {
+    padding-bottom: 100px;
+    background: none;
+  }
+  section.features .features-inside .feature-block:first-of-type img {
+    display: block;
+  }
+  section.features .features-inside .feature-block:first-of-type img:last-of-type {
+    max-width: 100%;
+    filter: drop-shadow(-40px 27px 31px rgba(50, 31, 2, 0.22));
+    padding: 0 18px;
+    box-sizing: border-box;
+  }
+  section.features .features-inside .feature-block .feature-text h1 {
+    font-size: 48px;
+    line-height: 48px;
+    text-align: center;
+  }
+  section.features .features-inside .feature-block .feature-text p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  section.features .features-inside .feature-block img:first-of-type {
+    margin-bottom: 40px;
+  }
+  section.features .features-inside .cards {
+    margin-bottom: 100px;
+    position: static !important;
+    flex-direction: column;
+    padding: 0px 16px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  section.features .features-inside .cards li {
+    width: 100% !important;
+    max-width: 345px;
+    margin-bottom: 35px;
+  }
+  section.features .features-inside .cards li img {
+    max-width: 100%;
+  }
+  section.features .features-inside .cards li p {
+    width: 100%;
+    line-height: 25px;
+    text-align: center !important;
+  }
+}
 .page-header {
   background-image: url("../assets/header-bg.jpg");
   background-size: cover;
@@ -131,13 +470,15 @@
 }
 .page-header div.wave {
   position: absolute;
-  bottom: -1px;
+  bottom: -10px;
   left: 0;
   width: 100%;
-  height: 335px;
-  background: url("../assets/wave-up.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
+  height: 420px;
+  z-index: 10;
+}
+.page-header div.wave img {
+  width: 100%;
+  height: 100%;
 }
 .page-header::before {
   content: "";
@@ -154,6 +495,9 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 25px;
+}
+.page-header .header-nav .nav-adaptive {
+  display: none;
 }
 .page-header .header-nav .nav-left {
   width: 485px;
@@ -198,6 +542,8 @@
   align-items: center;
 }
 .page-header .header-main .header-text button {
+  z-index: 20;
+  position: relative;
   transition: box-shadow 0.3s ease-in-out;
 }
 .page-header .header-main .header-text button:focus {
@@ -210,12 +556,15 @@
   font-size: 72px;
   color: #fff;
   line-height: 72px;
-  text-shadow: 5px 0px 0 #000, 4.6195px 1.9135px 0 #000, 3.5355px 3.5355px 0 #000, 1.9135px 4.6195px 0 #000, 0px 5px 0 #000, -1.9135px 4.6195px 0 #000, -3.5355px 3.5355px 0 #000, -4.6195px 1.9135px 0 #000, -5px 0px 0 #000, -4.6195px -1.9135px 0 #000, -3.5355px -3.5355px 0 #000, -1.9135px -4.6195px 0 #000, 0px -5px 0 #000, 1.9135px -4.6195px 0 #000, 3.5355px -3.5355px 0 #000, 4.6195px -1.9135px 0 #000;
+  text-shadow: 5px 2px 0 #000, 4.6195px 3.9135px 0 #000, 3.5355px 5.5355px 0 #000, 1.9135px 6.6195px 0 #000, 0px 7px 0 #000, -1.9135px 6.6195px 0 #000, -3.5355px 5.5355px 0 #000, -4.6195px 3.9135px 0 #000, -5px 2px 0 #000, -4.6195px 0.0865px 0 #000, -3.5355px -1.5355px 0 #000, -1.9135px -2.6195px 0 #000, 0px -3px 0 #000, 1.9135px -2.6195px 0 #000, 3.5355px -1.5355px 0 #000, 4.6195px 0.0865px 0 #000;
   margin-bottom: 32px;
 }
 .page-header .header-main .header-text h1 img {
   vertical-align: bottom;
   filter: drop-shadow(0px 0px 13px rgba(255, 200, 31, 0.38));
+}
+.page-header .header-main .header-text h1 img:first-of-type {
+  display: none;
 }
 .page-header .header-main .header-text p {
   font-family: "Balsamiq Sans Regular";
@@ -225,17 +574,34 @@
   max-width: 335px;
   margin-bottom: 54px;
 }
-.page-header .cards {
+.page-header .header-main .header-text .download-button {
+  display: none;
+}
+
+section.features {
+  background: linear-gradient(180deg, #edb613 0%, #eda00b 100%);
+  background-size: cover;
+  padding: 180px 0;
+  position: relative;
+  z-index: 20;
+}
+section.features .features-inside {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 20;
+}
+section.features .features-inside .cards {
+  z-index: 20;
+  position: absolute;
   display: flex;
   justify-content: space-between;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  max-width: 1215px;
   width: 100%;
   z-index: 10;
+  left: 0;
+  right: 0;
 }
-.page-header .cards li {
+section.features .features-inside .cards li {
   background: #423b2b;
   border: 7px solid #5d5347;
   border-radius: 14px;
@@ -249,33 +615,23 @@
   max-height: 256px;
   width: 32%;
   box-sizing: border-box;
+  padding-top: 176px;
+  display: flex;
+  align-items: flex-end;
+  z-index: 20;
 }
-.page-header .cards li p {
-  position: absolute;
-  left: 32px;
-  bottom: 30px;
+section.features .features-inside .cards li p {
   text-align: left;
 }
-.page-header .cards li img {
-  position: relative;
+section.features .features-inside .cards li img {
+  position: absolute;
   top: -25px;
   left: 0;
+  z-index: 20;
 }
-.page-header .cards li:first-child img {
+section.features .features-inside .cards li:first-child img {
   left: -30px;
   top: -120px;
-}
-
-section.features {
-  background: linear-gradient(180deg, #edbe16 0%, #eda00b 100%);
-  background-size: cover;
-  padding: 180px 0;
-  position: relative;
-  z-index: 10;
-}
-section.features .features-inside {
-  display: flex;
-  flex-direction: column;
 }
 section.features .feature-block {
   z-index: 20;
@@ -284,7 +640,13 @@ section.features .feature-block:first-of-type {
   background-image: url("../assets/features-1.png");
   background-size: contain;
   background-repeat: no-repeat;
-  padding-bottom: 600px;
+  padding-bottom: 500px;
+}
+section.features .feature-block:first-of-type img {
+  display: none;
+}
+section.features .feature-block img {
+  max-width: 80%;
 }
 section.features .feature-block:last-of-type {
   display: flex;
@@ -299,6 +661,8 @@ section.features .feature-block:last-of-type .feature-text p {
 }
 section.features .feature-block:last-of-type .feature-text img {
   margin-right: 100px;
+  box-sizing: border-box;
+  max-width: 80%;
 }
 section.features .feature-block .feature-text h1 {
   font-family: "Balsamiq Sans Regular";
@@ -307,7 +671,7 @@ section.features .feature-block .feature-text h1 {
   color: #fff;
   line-height: 72px;
   margin-bottom: 30px;
-  text-shadow: 5px 0px 0 #000, 4.6195px 1.9135px 0 #000, 3.5355px 3.5355px 0 #000, 1.9135px 4.6195px 0 #000, 0px 5px 0 #000, -1.9135px 4.6195px 0 #000, -3.5355px 3.5355px 0 #000, -4.6195px 1.9135px 0 #000, -5px 0px 0 #000, -4.6195px -1.9135px 0 #000, -3.5355px -3.5355px 0 #000, -1.9135px -4.6195px 0 #000, 0px -5px 0 #000, 1.9135px -4.6195px 0 #000, 3.5355px -3.5355px 0 #000, 4.6195px -1.9135px 0 #000;
+  text-shadow: 5px 2px 0 #000, 4.6195px 3.9135px 0 #000, 3.5355px 5.5355px 0 #000, 1.9135px 6.6195px 0 #000, 0px 7px 0 #000, -1.9135px 6.6195px 0 #000, -3.5355px 5.5355px 0 #000, -4.6195px 3.9135px 0 #000, -5px 2px 0 #000, -4.6195px 0.0865px 0 #000, -3.5355px -1.5355px 0 #000, -1.9135px -2.6195px 0 #000, 0px -3px 0 #000, 1.9135px -2.6195px 0 #000, 3.5355px -1.5355px 0 #000, 4.6195px 0.0865px 0 #000;
 }
 section.features .feature-block .feature-text p {
   font-family: "Balsamiq Sans Regular";
@@ -325,15 +689,22 @@ section.downloads {
   z-index: 15;
 }
 section.downloads div.wave {
-  background: url("../assets/wave-bottom.svg");
   width: 100%;
-  height: 175px;
   position: absolute;
   top: 0px;
   left: 0;
   background-size: cover;
   background-repeat: no-repeat;
   z-index: 9;
+  overflow: hidden;
+}
+section.downloads div.wave img {
+  font-size: 0;
+  width: 100vw !important;
+  height: 100%;
+  position: relative;
+  top: -10px;
+  box-sizing: border-box;
 }
 section.downloads header h1 {
   font-family: "Balsamiq Sans Regular";
@@ -364,9 +735,12 @@ section.downloads > div > h1 {
   font-size: 72px;
   color: #fff;
   line-height: 72px;
-  text-shadow: 5px 0px 0 #000, 4.6195px 1.9135px 0 #000, 3.5355px 3.5355px 0 #000, 1.9135px 4.6195px 0 #000, 0px 5px 0 #000, -1.9135px 4.6195px 0 #000, -3.5355px 3.5355px 0 #000, -4.6195px 1.9135px 0 #000, -5px 0px 0 #000, -4.6195px -1.9135px 0 #000, -3.5355px -3.5355px 0 #000, -1.9135px -4.6195px 0 #000, 0px -5px 0 #000, 1.9135px -4.6195px 0 #000, 3.5355px -3.5355px 0 #000, 4.6195px -1.9135px 0 #000;
+  text-shadow: 5px 2px 0 #000, 4.6195px 3.9135px 0 #000, 3.5355px 5.5355px 0 #000, 1.9135px 6.6195px 0 #000, 0px 7px 0 #000, -1.9135px 6.6195px 0 #000, -3.5355px 5.5355px 0 #000, -4.6195px 3.9135px 0 #000, -5px 2px 0 #000, -4.6195px 0.0865px 0 #000, -3.5355px -1.5355px 0 #000, -1.9135px -2.6195px 0 #000, 0px -3px 0 #000, 1.9135px -2.6195px 0 #000, 3.5355px -1.5355px 0 #000, 4.6195px 0.0865px 0 #000;
   text-align: center;
   margin-bottom: 50px;
+}
+section.downloads > div > h1 span img:first-of-type {
+  display: none;
 }
 section.downloads > div > h1 img {
   vertical-align: bottom;

@@ -3,33 +3,36 @@
   margin: 0;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .center {
   max-width: 1215px;
   margin: 0 auto;
 }
 
-@mixin stroke($color, $width) {
-  text-shadow: ($width * 1) ($width * 0) 0 $color,
-    ($width * 0.9239) ($width * 0.3827) 0 $color,
-    ($width * 0.7071) ($width * 0.7071) 0 $color,
-    ($width * 0.3827) ($width * 0.9239) 0 $color,
-    ($width * 0) ($width * 1) 0 $color,
-    ($width * -0.3827) ($width * 0.9239) 0 $color,
-    ($width * -0.7071) ($width * 0.7071) 0 $color,
-    ($width * -0.9239) ($width * 0.3827) 0 $color,
-    ($width * -1) ($width * 0) 0 $color,
-    ($width * -0.9239) ($width * -0.3827) 0 $color,
-    ($width * -0.7071) ($width * -0.7071) 0 $color,
-    ($width * -0.3827) ($width * -0.9239) 0 $color,
-    ($width * 0) ($width * -1) 0 $color,
-    ($width * 0.3827) ($width * -0.9239) 0 $color,
-    ($width * 0.7071) ($width * -0.7071) 0 $color,
-    ($width * 0.9239) ($width * -0.3827) 0 $color;
+@mixin stroke($color, $width, $offset) {
+  text-shadow: ($width * 1) ($width * 0 + $offset) 0 $color,
+    ($width * 0.9239) ($width * 0.3827 + $offset) 0 $color,
+    ($width * 0.7071) ($width * 0.7071 + $offset) 0 $color,
+    ($width * 0.3827) ($width * 0.9239 + $offset) 0 $color,
+    ($width * 0) ($width * 1 + $offset) 0 $color,
+    ($width * -0.3827) ($width * 0.9239 + $offset) 0 $color,
+    ($width * -0.7071) ($width * 0.7071 + $offset) 0 $color,
+    ($width * -0.9239) ($width * 0.3827 + $offset) 0 $color,
+    ($width * -1) ($width * 0 + $offset) 0 $color,
+    ($width * -0.9239) ($width * -0.3827 + $offset) 0 $color,
+    ($width * -0.7071) ($width * -0.7071 + $offset) 0 $color,
+    ($width * -0.3827) ($width * -0.9239 + $offset) 0 $color,
+    ($width * 0) ($width * -1 + $offset) 0 $color,
+    ($width * 0.3827) ($width * -0.9239 + $offset) 0 $color,
+    ($width * 0.7071) ($width * -0.7071 + $offset) 0 $color,
+    ($width * 0.9239) ($width * -0.3827 + $offset) 0 $color;
 }
 
 .yellow-button {
   transition: all 0.3s ease-in-out;
-  letter-spacing: 1.5px;
   &:hover,
   &:focus {
     cursor: pointer;
@@ -51,7 +54,7 @@
   box-shadow: inset 15px 0px 10px 0px #ffdc30,
     inset -8px -30px 10px 5px rgba(247, 171, 22, 0.6);
   border-radius: 10px;
-  @include stroke(#000, 2px);
+  @include stroke(#000, 2px, 1);
 }
 
 @font-face {
@@ -112,10 +115,17 @@
         font-family: "Balsamiq Sans Regular";
         font-size: 18px;
         border-radius: 10px;
+        border: 3px solid transparent;
         &::placeholder {
           color: #96948b;
           font-family: "Balsamiq Sans Regular";
           font-size: 18px;
+        }
+        &:focus {
+          border-color: #98856e;
+          &::placeholder {
+            color: #fff;
+          }
         }
       }
     }
