@@ -77,6 +77,12 @@ body {
   src: url("../assets/fonts/montserrat/Montserrat-Bold.ttf");
 }
 
+@media (max-width: 375px) {
+  .popup {
+    max-width: 340px;
+  }
+}
+
 .popup {
   z-index: 20;
   position: fixed;
