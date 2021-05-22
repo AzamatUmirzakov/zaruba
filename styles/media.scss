@@ -86,10 +86,7 @@
       .feature-block {
         &:last-of-type {
           padding: 0 18px !important;
-          display: flex;
-          align-items: center;
           img {
-            // display: none !important;
             max-width: 50% !important;
           }
           .feature-text {
@@ -101,10 +98,11 @@
             p {
               margin-bottom: 55px;
             }
+            .features-icon {
+              display: none;
+            }
           }
         }
-        // background: none !important;
-        // background-size: cover !important;
         background-position: bottom center;
         &:first-of-type {
           img {

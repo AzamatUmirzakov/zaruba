@@ -224,8 +224,6 @@ header.page-header .header-inside .header-nav .nav-right {
   }
   section.features .features-inside .feature-block:last-of-type {
     padding: 0 18px !important;
-    display: flex;
-    align-items: center;
   }
   section.features .features-inside .feature-block:last-of-type img {
     max-width: 50% !important;
@@ -239,6 +237,9 @@ header.page-header .header-inside .header-nav .nav-right {
   }
   section.features .features-inside .feature-block:last-of-type .feature-text p {
     margin-bottom: 55px;
+  }
+  section.features .features-inside .feature-block:last-of-type .feature-text .features-icon {
+    display: none;
   }
   section.features .features-inside .feature-block:first-of-type {
     padding-bottom: 200px;
