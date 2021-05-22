@@ -297,7 +297,7 @@ section.features .features-inside .feature-block:first-of-type .feature-text p {
   }
 
   section.downloads {
-    background: url("../assets/downloads-bg-adaptive.png") !important;
+    background: url("../assets/downloads-bg-adaptive.jpg") !important;
     background-size: cover !important;
   }
   section.downloads div.wave {
@@ -683,7 +683,7 @@ section.features .feature-block .feature-text p {
 section.downloads {
   padding-top: 190px;
   padding-bottom: 150px;
-  background-image: url("../assets/download-bg.png");
+  background-image: url("../assets/download-bg.jpg");
   background-size: cover;
   position: relative;
   z-index: 15;
