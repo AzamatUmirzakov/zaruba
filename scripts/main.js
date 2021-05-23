@@ -149,25 +149,25 @@ document.querySelector(".header-image").style.right = "0px";
 document.querySelector(".header-text").style.opacity = "1";
 document.querySelector(".header-text h1").style.bottom = "0";
 document.querySelector(".header-text p").style.bottom = "0";
-
+//
 // animating cards
 // };
 
-// function cards_animate() {
-let scroll_y = window.pageYOffset;
-let cards = document.querySelector("ul.cards");
-let cards_children = Array.from(cards.children);
-if (
-  scroll_y + document.documentElement.clientHeight >
-  cards.getBoundingClientRect().top + window.pageYOffset
-) {
-  for (let card of cards_children) {
-    card.style.opacity = "1";
-    card.style.bottom = "0";
+function cards_animate() {
+  let scroll_y = window.pageYOffset;
+  let cards = document.querySelector("ul.cards");
+  let cards_children = Array.from(cards.children);
+  if (
+    scroll_y + document.documentElement.clientHeight >
+    cards.getBoundingClientRect().top + window.pageYOffset
+  ) {
+    for (let card of cards_children) {
+      card.style.opacity = "1";
+      card.style.bottom = "0";
+    }
+    document.removeEventListener("scroll", cards_animate);
   }
-  document.removeEventListener("scroll", cards_animate);
 }
-// }
 
 function feature_images_animate() {
   let feature_block = document.querySelector(".feature-block:first-of-type");
