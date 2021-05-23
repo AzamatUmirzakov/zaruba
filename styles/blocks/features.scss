@@ -73,14 +73,19 @@ section.features {
     z-index: 20;
     &:first-of-type {
       background-image: url("../assets/features-1.png");
-      background-size: 100%;
+      background-size: contain;
+      background-position: left center;
       background-repeat: no-repeat;
-      padding-bottom: 500px;
+      padding-bottom: 200px;
+      margin-bottom: 100px;
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
       .feature-images {
         padding-top: 100px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: nowrap;
         img {
           position: relative;
           filter: drop-shadow(-40px 27px 31px rgba(50, 31, 2, 0.12));
@@ -90,20 +95,19 @@ section.features {
         img:first-of-type {
           transform: rotate(-30deg);
           bottom: -100px;
-          right: -200px;
+          // right: -200px;
+          left: 100px;
         }
         img:last-of-type {
           transform: rotate(18deg);
-          right: -130px;
+          // right: -130px;
+          left: 0px;
           bottom: -20px;
         }
       }
       & > img {
         display: none;
       }
-    }
-    img {
-      max-width: 80%;
     }
     &:last-of-type {
       display: flex;
@@ -129,7 +133,7 @@ section.features {
         img {
           margin-right: 100px;
           box-sizing: border-box;
-          max-width: 80%;
+          // max-width: 80%;
         }
       }
     }
