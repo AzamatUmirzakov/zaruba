@@ -115,6 +115,9 @@ section.features {
       align-items: flex-start;
       .feature-block-image-wrap {
         position: relative;
+        img:first-of-type {
+          max-width: 80%;
+        }
         img.image-text {
           position: absolute;
           top: 100px;
