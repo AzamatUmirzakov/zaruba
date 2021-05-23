@@ -48,22 +48,25 @@ function show_popup() {
   function click_listener(e) {
     if (!popup.contains(e.target)) {
       document.body.style.overflow = "";
-      document.querySelector(".popup").remove();
-      document.querySelector(".popup-bg").remove();
-      for (let child of document.body.children) {
-        child.style.filter = "";
-        child.style.transform = "";
-        // child.style.margin = "";
-      }
-      document.querySelector(".features").style.background =
-        "linear-gradient(180deg, #edb613 0%, #eda00b 100%)";
+      document.querySelector(".popup").style.opacity = "0";
+      setTimeout(() => {
+        document.querySelector(".popup").remove();
+        document.querySelector(".popup-bg").remove();
+        for (let child of document.body.children) {
+          child.style.filter = "";
+          child.style.transform = "";
+          // child.style.margin = "";
+        }
+        document.querySelector(".features").style.background =
+          "linear-gradient(180deg, #edb613 0%, #eda00b 100%)";
 
-      document.querySelector(".wave img").src = "assets/wave-up.png";
-      document.removeEventListener("click", click_listener);
-      Array.from(document.querySelectorAll(".wave"))[1].querySelector(
-        "img"
-      ).src = "assets/wave-bottom.svg";
-      document.querySelector(".page-footer").style.background = "#eda00b";
+        document.querySelector(".wave img").src = "assets/wave-up.png";
+        document.removeEventListener("click", click_listener);
+        Array.from(document.querySelectorAll(".wave"))[1].querySelector(
+          "img"
+        ).src = "assets/wave-bottom.svg";
+        document.querySelector(".page-footer").style.background = "#eda00b";
+      }, 350);
     }
   }
   document.body.style.overflow = "hidden";
@@ -122,9 +125,14 @@ function show_popup() {
   popup.append(header);
   popup.append(form);
   // pushing it to body
+  popup.style.opacity = "0";
   document.body.append(popup_bg);
   document.body.append(popup);
+  popup.style.transition = "all 0.3s ease-in-out";
 
+  setTimeout(() => {
+    popup.style.opacity = "1";
+  }, 0);
   popup.style.left =
     document.documentElement.clientWidth / 2 - popup.offsetWidth / 2 + "px";
   popup.style.top =

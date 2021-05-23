@@ -84,6 +84,8 @@ body {
 }
 
 .popup {
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
   z-index: 20;
   position: fixed;
   padding: 35px 40px 40px 40px;
