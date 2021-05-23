@@ -141,3 +141,66 @@ function show_popup() {
     document.addEventListener("click", click_listener);
   }, 0);
 }
+
+window.onload = function () {
+  // animating header
+  document.querySelector(".header-image").style.opacity = "1";
+  document.querySelector(".header-image").style.right = "0px";
+  document.querySelector(".header-text").style.opacity = "1";
+  document.querySelector(".header-text h1").style.bottom = "0";
+  document.querySelector(".header-text p").style.bottom = "0";
+
+  // animating cards
+};
+
+function cards_animate() {
+  let scroll_y = window.pageYOffset;
+  let cards = document.querySelector("ul.cards");
+  let cards_children = Array.from(cards.children);
+  if (
+    scroll_y + document.documentElement.clientHeight >
+    cards.getBoundingClientRect().top + window.pageYOffset
+  ) {
+    for (let card of cards_children) {
+      card.style.opacity = "1";
+      card.style.bottom = "0";
+    }
+    document.removeEventListener("scroll", cards_animate);
+  }
+}
+
+function feature_images_animate() {
+  let feature_block = document.querySelector(".feature-block:first-of-type");
+  let feature_images = feature_block.querySelector(".feature-images");
+  let scroll_y = window.pageYOffset;
+  if (
+    scroll_y + document.documentElement.clientHeight >
+    feature_block.getBoundingClientRect().top + window.pageYOffset
+  ) {
+    feature_images.firstElementChild.style.transform = "rotate(-15deg)";
+    feature_images.firstElementChild.style.bottom = "-50px";
+    feature_images.firstElementChild.style.opacity = "1";
+    feature_images.lastElementChild.style.transform = "rotate(9deg)";
+    feature_images.lastElementChild.style.bottom = "40px";
+    feature_images.lastElementChild.style.opacity = "1";
+  }
+}
+
+function feature_text_animate() {
+  let feature_block = document.querySelector(".feature-block:last-of-type");
+  let feature_text = feature_block.querySelector("img.image-text");
+  let scroll_y = window.pageYOffset;
+  if (
+    scroll_y + document.documentElement.clientHeight >
+    feature_block.getBoundingClientRect().top + window.pageYOffset
+  ) {
+    feature_text.style.opacity = "1";
+    feature_text.style.top = "0";
+  }
+}
+document.addEventListener("scroll", cards_animate);
+document.addEventListener("scroll", feature_images_animate);
+document.addEventListener("scroll", feature_text_animate);
+cards_animate();
+feature_images_animate();
+feature_text_animate();

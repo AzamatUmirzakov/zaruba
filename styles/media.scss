@@ -16,10 +16,20 @@
     padding-bottom: 150px;
     .header-inside {
       .header-nav {
+        position: relative;
         padding: 0;
-        .nav-left,
         .nav-right {
           display: none !important;
+        }
+        .nav-left {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: auto;
+          .nav-logo {
+            display: none;
+          }
         }
         .nav-adaptive {
           width: 100%;
@@ -105,7 +115,7 @@
         }
         background-position: bottom center;
         &:first-of-type {
-          img {
+          & > img {
             max-width: 100%;
             &:first-of-type {
               width: 100%;

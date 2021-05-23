@@ -31,6 +31,31 @@ body {
     ($width * 0.9239) ($width * -0.3827 + $offset) 0 $color;
 }
 
+@mixin stroke-drop-shadow($color, $width, $offset) {
+  filter: drop-shadow(($width) ($width * 0 + $offset) 0 $color)
+    drop-shadow(($width * 0.9239) ($width * 0.3827 + $offset) 0 $color)
+    drop-shadow(($width * 0.7071) ($width * 0.7071 + $offset) 0 $color)
+    drop-shadow(($width * 0.3827) ($width * 0.9239 + $offset) 0 $color)
+    drop-shadow(($width * 0) ($width * 1 + $offset) 0 $color)
+    drop-shadow(($width * -0.3827 + 1) ($width * 0.9239 + $offset) 0 $color)
+    drop-shadow(($width * -0.7071 + 1) ($width * 0.7071 + $offset) 0 $color)
+    drop-shadow(($width * -0.9239 + 1) ($width * 0.3827 + $offset) 0 $color)
+    drop-shadow(($width * -1) ($width * 0 + $offset) 0 $color)
+    drop-shadow(
+      ($width * -0.9239 + 1) ($width * -0.3827 + 1 + $offset) 0 $color
+    )
+    drop-shadow(($width * -0.7071+ 1) ($width * -0.7071 + 1 + $offset) 0 $color)
+    drop-shadow(($width * -0.3827+ 1) ($width * -0.9239 + 1 + $offset) 0 $color)
+    drop-shadow(($width * 0) ($width * -1 + $offset) 0 $color)
+    drop-shadow(($width * 0.3827) ($width * -0.9239+ 1 + $offset) 0 $color)
+    drop-shadow(($width * 0.7071) ($width * -0.7071+ 1 + $offset) 0 $color)
+    drop-shadow(($width * 0.9239) ($width * -0.3827+ 1 + $offset) 0 $color);
+  // filter: drop-shadow(($width * 1) ($width * 0 + $offset) 0 $color)
+  //   drop-shadow(($width * 0) ($width * 1 + $offset) 0 $color)
+  //   drop-shadow(($width * -1) ($width * 0 + $offset) 0 $color)
+  //   drop-shadow(($width * 0) ($width * -1 + $offset) 0 $color);
+}
+
 .yellow-button {
   transition: all 0.3s ease-in-out;
   &:hover,
