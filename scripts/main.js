@@ -142,16 +142,16 @@ function show_popup() {
   }, 0);
 }
 
-window.onload = function () {
-  // animating header
-  document.querySelector(".header-image").style.opacity = "1";
-  document.querySelector(".header-image").style.right = "0px";
-  document.querySelector(".header-text").style.opacity = "1";
-  document.querySelector(".header-text h1").style.bottom = "0";
-  document.querySelector(".header-text p").style.bottom = "0";
+// window.onload = function () {
+// animating header
+document.querySelector(".header-image").style.opacity = "1";
+document.querySelector(".header-image").style.right = "0px";
+document.querySelector(".header-text").style.opacity = "1";
+document.querySelector(".header-text h1").style.bottom = "0";
+document.querySelector(".header-text p").style.bottom = "0";
 
-  // animating cards
-};
+// animating cards
+// };
 
 // function cards_animate() {
 let scroll_y = window.pageYOffset;
