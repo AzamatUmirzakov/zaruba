@@ -34,6 +34,24 @@ function adaptivity() {
   img_text.style.left = `calc(50% - ${
     parseFloat(getComputedStyle(img_text).width) / 2
   }px)`;
+
+  let line_images = document.querySelector(".line-images");
+  for (let img of line_images.children) {
+    img.addEventListener("load", () => {
+      let left = parseFloat(getComputedStyle(img).left);
+      setInterval(() => {
+        let margin = getComputedStyle(
+          document.querySelector(".center")
+        ).marginLeft;
+        img.style.left = parseFloat(margin) + left + "px";
+      }, 100);
+    });
+  }
+
+  if (window.matchMedia("(min-width: 2050px)")) {
+    let feature_images = document.querySelector(".feature-images");
+    feature_images.style.left = parseFloat(margin) + 900 + "px";
+  }
 }
 
 setInterval(adaptivity, 100);
@@ -188,6 +206,7 @@ function feature_images_animate() {
     feature_images.lastElementChild.style.transform = "rotate(9deg)";
     feature_images.lastElementChild.style.bottom = "40px";
     feature_images.lastElementChild.style.opacity = "1";
+    document.removeEventListener("scroll", feature_images_animate);
   }
 }
 
@@ -201,6 +220,7 @@ function feature_text_animate() {
   ) {
     feature_text.style.opacity = "1";
     feature_text.style.top = "0";
+    document.removeEventListener("scroll", feature_text_animate);
   }
 }
 document.addEventListener("scroll", cards_animate);
