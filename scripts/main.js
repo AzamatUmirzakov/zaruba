@@ -29,6 +29,11 @@ function adaptivity() {
       item.style.paddingRight = "0px";
     }
   }
+
+  let img_text = document.querySelector(".image-text");
+  img_text.style.left = `calc(50% - ${
+    parseFloat(getComputedStyle(img_text).width) / 2
+  }px)`;
 }
 
 setInterval(adaptivity, 100);

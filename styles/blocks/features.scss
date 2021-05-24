@@ -24,12 +24,23 @@ section.features {
         transition: all 1s ease-in-out;
         &:nth-of-type(1) {
           bottom: -50px;
+          img {
+            bottom: 10px;
+            left: -30px;
+          }
         }
         &:nth-of-type(2) {
           bottom: -100px;
+          img {
+            max-width: 230px;
+            bottom: 90px;
+          }
         }
         &:nth-of-type(3) {
           bottom: -150px;
+          img {
+            max-width: 250px;
+          }
         }
         background: #423b2b;
         border: 7px solid #5d5347;
@@ -39,7 +50,7 @@ section.features {
         color: #ffffff;
         text-align: center;
         padding: 0 32px;
-        padding-bottom: 30px;
+        padding-bottom: 50px;
         position: relative;
         max-height: 256px;
         width: 32%;
@@ -49,22 +60,13 @@ section.features {
         align-items: flex-end;
         z-index: 20;
         p {
-          // position: absolute;
-          // left: 32px;
-          // bottom: 30px;
           text-align: left;
         }
         img {
           position: absolute;
-          top: -25px;
+          bottom: 100px;
           left: 0;
           z-index: 20;
-        }
-        &:first-child {
-          img {
-            left: -30px;
-            top: -120px;
-          }
         }
       }
     }
@@ -73,29 +75,39 @@ section.features {
     z-index: 20;
     &:first-of-type {
       background-image: url("../assets/features-1.png");
-      background-size: contain;
+      background-size: cover;
       background-position: left center;
       background-repeat: no-repeat;
-      padding-bottom: 200px;
-      margin-bottom: 100px;
+      padding-bottom: 350px;
+      margin-bottom: 170px;
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
+      position: relative;
+      .feature-text {
+        width: 517px;
+      }
       .feature-images {
-        padding-top: 100px;
+        max-width: 70%;
+        // padding-top: 100px;
         display: flex;
         justify-content: center;
         flex-wrap: nowrap;
+        position: absolute;
+        right: 50px;
+        top: 100px;
         img {
           position: relative;
-          filter: drop-shadow(-40px 27px 31px rgba(50, 31, 2, 0.12));
+          filter: drop-shadow(-40px 27px 31px rgba(50, 31, 2, 0.22));
           transition: all 1s ease-in-out;
           opacity: 0;
+          border-radius: 12px;
         }
         img:first-of-type {
           transform: rotate(-30deg);
           bottom: -100px;
           // right: -200px;
+          max-width: 320px;
           left: 100px;
         }
         img:last-of-type {
@@ -103,6 +115,7 @@ section.features {
           // right: -130px;
           left: 0px;
           bottom: -20px;
+          max-width: 395px;
         }
       }
       & > img {
@@ -129,6 +142,7 @@ section.features {
         }
       }
       .feature-text {
+        max-width: 50%;
         text-align: right;
         p {
           margin-bottom: 100px;

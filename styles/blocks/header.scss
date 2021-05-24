@@ -56,6 +56,9 @@
       }
       a.nav-logo {
         margin-right: 100px;
+        img {
+          max-width: 78px;
+        }
       }
     }
     .nav-right {
@@ -138,6 +141,11 @@
       position: relative;
       right: -100px;
       transition: all 1s ease-in-out;
+      display: inline-block;
+      max-width: 560px;
+      img {
+        max-width: 100%;
+      }
     }
   }
 }

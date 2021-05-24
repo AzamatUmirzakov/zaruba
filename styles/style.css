@@ -186,6 +186,9 @@ body {
   header.page-header .header-inside .header-nav .nav-adaptive button:hover {
     cursor: pointer;
   }
+  header.page-header .header-inside .header-nav .nav-adaptive a img {
+    max-width: 60px;
+  }
   header.page-header .header-inside .header-main {
     margin-top: 65px;
     display: flex;
@@ -200,13 +203,13 @@ body {
     font-size: 48px;
     line-height: 48px;
     text-align: center;
-    max-width: 310px;
+    max-width: 350px;
   }
   header.page-header .header-inside .header-main .header-text h1 img {
     display: inline !important;
     height: 30px;
     width: 24px;
-    vertical-align: baseline;
+    vertical-align: bottom;
   }
   header.page-header .header-inside .header-main .header-text p {
     text-align: center;
@@ -236,13 +239,6 @@ body {
     flex-direction: column;
     align-items: center;
   }
-  section.features .features-inside .feature-block .feature-images {
-    width: 100%;
-  }
-  section.features .features-inside .feature-block .feature-images img {
-    margin: 0;
-    padding: 0;
-  }
   section.features .features-inside .feature-block:last-of-type {
     display: flex;
     flex-direction: column-reverse;
@@ -260,6 +256,7 @@ body {
   }
   section.features .features-inside .feature-block:last-of-type .feature-text {
     width: 100%;
+    max-width: 100%;
     text-align: center;
   }
   section.features .features-inside .feature-block:last-of-type .feature-text h1 {
@@ -274,12 +271,20 @@ body {
     background: none;
     display: flex;
     flex-direction: column;
+    margin-bottom: 0;
   }
   section.features .features-inside .feature-block:first-of-type .feature-images {
     display: flex;
     flex-direction: column;
     align-items: center;
     order: 2;
+    position: static !important;
+    width: 100%;
+    max-width: 100% !important;
+  }
+  section.features .features-inside .feature-block:first-of-type .feature-images img {
+    margin: 0;
+    padding: 0;
   }
   section.features .features-inside .feature-block:first-of-type .feature-images img {
     position: static !important;
@@ -471,6 +476,9 @@ body {
 .page-header .header-nav .nav-left a.nav-logo {
   margin-right: 100px;
 }
+.page-header .header-nav .nav-left a.nav-logo img {
+  max-width: 78px;
+}
 .page-header .header-nav .nav-right {
   display: flex;
   justify-content: space-between;
@@ -549,6 +557,11 @@ body {
   position: relative;
   right: -100px;
   transition: all 1s ease-in-out;
+  display: inline-block;
+  max-width: 560px;
+}
+.page-header .header-main .header-image img {
+  max-width: 100%;
 }
 
 section.features {
@@ -585,7 +598,7 @@ section.features .features-inside .cards li {
   color: #ffffff;
   text-align: center;
   padding: 0 32px;
-  padding-bottom: 30px;
+  padding-bottom: 50px;
   position: relative;
   max-height: 256px;
   width: 32%;
@@ -598,60 +611,77 @@ section.features .features-inside .cards li {
 section.features .features-inside .cards li:nth-of-type(1) {
   bottom: -50px;
 }
+section.features .features-inside .cards li:nth-of-type(1) img {
+  bottom: 10px;
+  left: -30px;
+}
 section.features .features-inside .cards li:nth-of-type(2) {
   bottom: -100px;
 }
+section.features .features-inside .cards li:nth-of-type(2) img {
+  max-width: 230px;
+  bottom: 90px;
+}
 section.features .features-inside .cards li:nth-of-type(3) {
   bottom: -150px;
+}
+section.features .features-inside .cards li:nth-of-type(3) img {
+  max-width: 250px;
 }
 section.features .features-inside .cards li p {
   text-align: left;
 }
 section.features .features-inside .cards li img {
   position: absolute;
-  top: -25px;
+  bottom: 100px;
   left: 0;
   z-index: 20;
-}
-section.features .features-inside .cards li:first-child img {
-  left: -30px;
-  top: -120px;
 }
 section.features .feature-block {
   z-index: 20;
 }
 section.features .feature-block:first-of-type {
   background-image: url("../assets/features-1.png");
-  background-size: contain;
+  background-size: cover;
   background-position: left center;
   background-repeat: no-repeat;
-  padding-bottom: 200px;
-  margin-bottom: 100px;
+  padding-bottom: 350px;
+  margin-bottom: 170px;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  position: relative;
+}
+section.features .feature-block:first-of-type .feature-text {
+  width: 517px;
 }
 section.features .feature-block:first-of-type .feature-images {
-  padding-top: 100px;
+  max-width: 70%;
   display: flex;
   justify-content: center;
   flex-wrap: nowrap;
+  position: absolute;
+  right: 50px;
+  top: 100px;
 }
 section.features .feature-block:first-of-type .feature-images img {
   position: relative;
-  filter: drop-shadow(-40px 27px 31px rgba(50, 31, 2, 0.12));
+  filter: drop-shadow(-40px 27px 31px rgba(50, 31, 2, 0.22));
   transition: all 1s ease-in-out;
   opacity: 0;
+  border-radius: 12px;
 }
 section.features .feature-block:first-of-type .feature-images img:first-of-type {
   transform: rotate(-30deg);
   bottom: -100px;
+  max-width: 320px;
   left: 100px;
 }
 section.features .feature-block:first-of-type .feature-images img:last-of-type {
   transform: rotate(18deg);
   left: 0px;
   bottom: -20px;
+  max-width: 395px;
 }
 section.features .feature-block:first-of-type > img {
   display: none;
@@ -676,6 +706,7 @@ section.features .feature-block:last-of-type .feature-block-image-wrap img.image
   filter: drop-shadow(1px 0px 0 #000) drop-shadow(0.9239px 0.3827px 0 #000) drop-shadow(0.7071px 0.7071px 0 #000) drop-shadow(0.3827px 0.9239px 0 #000) drop-shadow(0px 1px 0 #000) drop-shadow(0.6173px 0.9239px 0 #000) drop-shadow(0.2929px 0.7071px 0 #000) drop-shadow(0.0761px 0.3827px 0 #000) drop-shadow(-1px 0px 0 #000) drop-shadow(0.0761px 0.6173px 0 #000) drop-shadow(0.2929px 0.2929px 0 #000) drop-shadow(0.6173px 0.0761px 0 #000) drop-shadow(0px -1px 0 #000) drop-shadow(0.3827px 0.0761px 0 #000) drop-shadow(0.7071px 0.2929px 0 #000) drop-shadow(0.9239px 0.6173px 0 #000);
 }
 section.features .feature-block:last-of-type .feature-text {
+  max-width: 50%;
   text-align: right;
 }
 section.features .feature-block:last-of-type .feature-text p {
@@ -726,6 +757,10 @@ section.downloads div.wave img {
   position: relative;
   top: -10px;
   box-sizing: border-box;
+}
+section.downloads header {
+  max-width: 70%;
+  margin: 0 auto;
 }
 section.downloads header h1 {
   font-family: "Balsamiq Sans Regular";
