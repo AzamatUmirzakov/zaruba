@@ -75,7 +75,7 @@ section.features {
     z-index: 20;
     &:first-of-type {
       background-image: url("../assets/features-1.png");
-      background-size: cover;
+      background-size: 100% 100%;
       background-position: left center;
       background-repeat: no-repeat;
       padding-bottom: 350px;
@@ -85,7 +85,7 @@ section.features {
       justify-content: space-between;
       position: relative;
       .feature-text {
-        width: 517px;
+        max-width: 517px;
       }
       .feature-images {
         max-width: 70%;

@@ -297,6 +297,11 @@ body {
     width: 100%;
     order: 1;
   }
+  section.features .features-inside .feature-block:first-of-type .feature-text {
+    width: 90%;
+    max-width: 90%;
+    margin: 0 auto;
+  }
   section.features .features-inside .feature-block .feature-text {
     width: 100%;
   }
@@ -642,7 +647,7 @@ section.features .feature-block {
 }
 section.features .feature-block:first-of-type {
   background-image: url("../assets/features-1.png");
-  background-size: cover;
+  background-size: 100% 100%;
   background-position: left center;
   background-repeat: no-repeat;
   padding-bottom: 350px;
@@ -653,7 +658,7 @@ section.features .feature-block:first-of-type {
   position: relative;
 }
 section.features .feature-block:first-of-type .feature-text {
-  width: 517px;
+  max-width: 517px;
 }
 section.features .feature-block:first-of-type .feature-images {
   max-width: 70%;
@@ -703,7 +708,7 @@ section.features .feature-block:last-of-type .feature-block-image-wrap img.image
   transition: all 1s ease-in-out;
   opacity: 0;
   left: 15%;
-  filter: drop-shadow(1px 0px 0 #000) drop-shadow(0.9239px 0.3827px 0 #000) drop-shadow(0.7071px 0.7071px 0 #000) drop-shadow(0.3827px 0.9239px 0 #000) drop-shadow(0px 1px 0 #000) drop-shadow(0.6173px 0.9239px 0 #000) drop-shadow(0.2929px 0.7071px 0 #000) drop-shadow(0.0761px 0.3827px 0 #000) drop-shadow(-1px 0px 0 #000) drop-shadow(0.0761px 0.6173px 0 #000) drop-shadow(0.2929px 0.2929px 0 #000) drop-shadow(0.6173px 0.0761px 0 #000) drop-shadow(0px -1px 0 #000) drop-shadow(0.3827px 0.0761px 0 #000) drop-shadow(0.7071px 0.2929px 0 #000) drop-shadow(0.9239px 0.6173px 0 #000);
+  filter: drop-shadow(1px 0px 0 #000) drop-shadow(0.9239px 0.3827px 0 #000) drop-shadow(0.7071px 0.7071px 0 #000) drop-shadow(0.3827px 0.9239px 0 #000) drop-shadow(0px 1px 0 #000) drop-shadow(-0.3827px 0.9239px 0 #000) drop-shadow(-0.7071px 0.7071px 0 #000) drop-shadow(-0.9239px 0.3827px 0 #000) drop-shadow(-1px 0px 0 #000) drop-shadow(0.0761px -0.3827px 0 #000) drop-shadow(0.2929px -0.7071px 0 #000) drop-shadow(0.6173px 0.0761px 0 #000) drop-shadow(0px -1px 0 #000) drop-shadow(0.3827px 0.0761px 0 #000) drop-shadow(0.7071px 0.2929px 0 #000) drop-shadow(0.9239px 0.6173px 0 #000);
 }
 section.features .feature-block:last-of-type .feature-text {
   max-width: 50%;
