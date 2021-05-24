@@ -48,7 +48,7 @@ function adaptivity() {
     });
   }
 
-  if (window.matchMedia("(min-width: 2050px)")) {
+  if (window.matchMedia("(min-width: 2050px)").matches) {
     let feature_images = document.querySelector(".feature-images");
     feature_images.style.left = parseFloat(margin) + 900 + "px";
   }
