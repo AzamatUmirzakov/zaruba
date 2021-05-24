@@ -845,10 +845,6 @@ section.downloads div.wave img {
   top: -10px;
   box-sizing: border-box;
 }
-section.downloads header {
-  max-width: 70%;
-  margin: 0 auto;
-}
 section.downloads header h1 {
   font-family: "Balsamiq Sans Regular";
   font-weight: bold;
