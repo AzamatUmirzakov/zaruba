@@ -66,6 +66,7 @@ body {
   background: #423b2b;
   border: 7px solid #5d5347;
   max-width: 405px;
+  box-sizing: border-box;
   border-radius: 14px;
 }
 .popup h1 {
