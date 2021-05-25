@@ -53,9 +53,11 @@ function adaptivity() {
     });
   }
 
+  let feature_images = document.querySelector(".feature-images");
   if (window.matchMedia("(min-width: 2050px)").matches) {
-    let feature_images = document.querySelector(".feature-images");
     feature_images.style.left = parseFloat(margin) + 900 + "px";
+  } else {
+    feature_images.style.left = "";
   }
 
   let nav_adaptive_button = document.querySelector(".nav-adaptive button");
