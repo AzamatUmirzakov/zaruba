@@ -22,11 +22,7 @@
           display: none !important;
         }
         .nav-left {
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: auto;
+          display: none;
           .nav-logo {
             display: none;
           }
@@ -224,7 +220,8 @@
     }
     .downloads-inside {
       text-align: center;
-      padding: 0 32px;
+      // padding: 0 32px;
+      padding: 0;
       & > h1 {
         font-size: 48px;
         line-height: 48px;
@@ -252,6 +249,7 @@
       }
       header.downloads-header {
         margin-bottom: 100px;
+        width: 100%;
         h1 {
           font-family: "Balsamiq Sans Regular";
           font-size: 48px;

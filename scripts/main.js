@@ -52,6 +52,9 @@ function adaptivity() {
     let feature_images = document.querySelector(".feature-images");
     feature_images.style.left = parseFloat(margin) + 900 + "px";
   }
+
+  let nav_adaptive_button = document.querySelector(".nav-adaptive button");
+  nav_adaptive_button.addEventListener("click", () => {});
 }
 
 setInterval(adaptivity, 100);
@@ -68,28 +71,31 @@ for (let button of registration_buttons) {
 }
 
 function show_popup() {
+  function remove_popup() {
+    document.body.style.overflow = "";
+    document.querySelector(".popup").style.opacity = "0";
+    setTimeout(() => {
+      document.querySelector(".popup").remove();
+      document.querySelector(".popup-bg").remove();
+      for (let child of document.body.children) {
+        child.style.filter = "";
+        child.style.transform = "";
+        // child.style.margin = "";
+      }
+      document.querySelector(".features").style.background =
+        "linear-gradient(180deg, #edb613 0%, #eda00b 100%)";
+
+      document.querySelector(".wave img").src = "assets/wave-up.png";
+      document.removeEventListener("click", click_listener);
+      Array.from(document.querySelectorAll(".wave"))[1].querySelector(
+        "img"
+      ).src = "assets/wave-bottom.svg";
+      document.querySelector(".page-footer").style.background = "#eda00b";
+    }, 350);
+  }
   function click_listener(e) {
     if (!popup.contains(e.target)) {
-      document.body.style.overflow = "";
-      document.querySelector(".popup").style.opacity = "0";
-      setTimeout(() => {
-        document.querySelector(".popup").remove();
-        document.querySelector(".popup-bg").remove();
-        for (let child of document.body.children) {
-          child.style.filter = "";
-          child.style.transform = "";
-          // child.style.margin = "";
-        }
-        document.querySelector(".features").style.background =
-          "linear-gradient(180deg, #edb613 0%, #eda00b 100%)";
-
-        document.querySelector(".wave img").src = "assets/wave-up.png";
-        document.removeEventListener("click", click_listener);
-        Array.from(document.querySelectorAll(".wave"))[1].querySelector(
-          "img"
-        ).src = "assets/wave-bottom.svg";
-        document.querySelector(".page-footer").style.background = "#eda00b";
-      }, 350);
+      remove_popup();
     }
   }
   document.body.style.overflow = "hidden";
@@ -119,6 +125,7 @@ function show_popup() {
   let header = document.createElement("h1");
   header.innerHTML = "Регистрация";
   let form = document.createElement("form");
+  form.name = "registration-form";
   // nickname
   let nickname = document.createElement("label");
   nickname.innerHTML = "Никнейм";
@@ -145,8 +152,38 @@ function show_popup() {
   form.append(nickname);
   form.append(password);
   form.append(button);
+
+  // login link
+  let login_text = document.createElement("p");
+  login_text.append(document.createElement("span"));
+  login_text.querySelector("span").innerHTML = "Уже есть аккаунт? ";
+  login_text.className = "login-text";
+  let login_link = document.createElement("button");
+  login_link.innerHTML = "Войти";
+  login_link.dataset.status = "to-login";
+  login_link.addEventListener("mouseup", () => {
+    if (login_link.dataset.status == "to-login") {
+      let popup = document.querySelector(".popup");
+      popup.querySelector("h1").innerHTML = "Вход";
+      popup.querySelector("p span").innerHTML = "Нет аккаунта? ";
+      popup.querySelector("p button").innerHTML = "Регистрация";
+      popup.querySelector("form button").innerHTML = "Войти";
+      form.name = "login-form";
+      login_link.dataset.status = "to-registration";
+    } else {
+      let popup = document.querySelector(".popup");
+      popup.querySelector("h1").innerHTML = "Регистрация";
+      popup.querySelector("p span").innerHTML = "Уже есть аккаунт? ";
+      popup.querySelector("p button").innerHTML = "Войти";
+      popup.querySelector("form button").innerHTML = "Зарегистрироваться";
+      form.name = "registration-form";
+      login_link.dataset.status = "to-login";
+    }
+  });
+  login_text.append(login_link);
   popup.append(header);
   popup.append(form);
+  popup.append(login_text);
   // pushing it to body
   popup.style.opacity = "0";
   document.body.append(popup_bg);

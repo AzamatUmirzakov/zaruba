@@ -14,6 +14,7 @@ body {
 
 .yellow-button {
   transition: all 0.3s ease-in-out;
+  filter: drop-shadow(0px 4px 0px rgba(0, 0, 0, 0.25));
   padding: 20px 37px;
   font-family: "Balsamiq Sans Regular";
   font-weight: 700;
@@ -115,6 +116,21 @@ body {
 .popup form .yellow-button {
   margin-top: 40px;
 }
+.popup .login-text {
+  font-size: 18px;
+  font-family: "Balsamiq Sans Regular";
+  margin-top: 22px;
+  color: #fff;
+}
+.popup .login-text button {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: "Balsamiq Sans Regular";
+  font-size: 18px;
+  color: #2fa8ff;
+  cursor: pointer;
+}
 
 .popup-bg {
   position: fixed;
@@ -162,11 +178,7 @@ body {
     display: none !important;
   }
   header.page-header .header-inside .header-nav .nav-left {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
+    display: none;
   }
   header.page-header .header-inside .header-nav .nav-left .nav-logo {
     display: none;
@@ -355,7 +367,7 @@ body {
   }
   section.downloads .downloads-inside {
     text-align: center;
-    padding: 0 32px;
+    padding: 0;
   }
   section.downloads .downloads-inside > h1 {
     font-size: 48px;
@@ -382,6 +394,7 @@ body {
   }
   section.downloads .downloads-inside header.downloads-header {
     margin-bottom: 100px;
+    width: 100%;
   }
   section.downloads .downloads-inside header.downloads-header h1 {
     font-family: "Balsamiq Sans Regular";
