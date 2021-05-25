@@ -248,51 +248,51 @@ body {
   section.features {
     padding: 0 !important;
   }
-  section.features .features-inside .feature-block {
+  section.features div.features-inside div.feature-block {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  section.features .features-inside .feature-block:last-of-type {
+  section.features div.features-inside div.feature-block:last-of-type {
     display: flex;
     flex-direction: column-reverse;
   }
-  section.features .features-inside .feature-block:last-of-type .feature-block-image-wrap {
+  section.features div.features-inside div.feature-block:last-of-type .feature-block-image-wrap {
     width: 100%;
     display: flex;
     justify-content: center;
   }
-  section.features .features-inside .feature-block:last-of-type .feature-block-image-wrap img:first-of-type {
+  section.features div.features-inside div.feature-block:last-of-type .feature-block-image-wrap img:first-of-type {
     margin: 0;
   }
-  section.features .features-inside .feature-block:last-of-type .feature-block-image-wrap img.image-text {
+  section.features div.features-inside div.feature-block:last-of-type .feature-block-image-wrap img.image-text {
     max-width: 205px;
     filter: drop-shadow(0.9px 0.4px 0 #000) drop-shadow(0.86195px 0.59135px 0 #000) drop-shadow(0.75355px 0.75355px 0 #000) drop-shadow(0.59135px 0.86195px 0 #000) drop-shadow(0.4px 0.9px 0 #000) drop-shadow(0.20865px 0.86195px 0 #000) drop-shadow(0.04645px 0.75355px 0 #000) drop-shadow(-0.06195px 0.59135px 0 #000) drop-shadow(-0.1px 0.4px 0 #000) drop-shadow(-0.06195px 0.20865px 0 #000) drop-shadow(0.04645px 0.04645px 0 #000) drop-shadow(0.20865px -0.06195px 0 #000) drop-shadow(0.4px -0.1px 0 #000) drop-shadow(0.59135px -0.06195px 0 #000) drop-shadow(0.75355px 0.04645px 0 #000) drop-shadow(0.86195px 0.20865px 0 #000);
   }
-  section.features .features-inside .feature-block:last-of-type img.features-icon {
+  section.features div.features-inside div.feature-block:last-of-type img.features-icon {
     display: none !important;
   }
-  section.features .features-inside .feature-block:last-of-type .feature-text {
+  section.features div.features-inside div.feature-block:last-of-type .feature-text {
     width: 90%;
     max-width: 90%;
     margin: 0 auto;
     text-align: center;
   }
-  section.features .features-inside .feature-block:last-of-type .feature-text h1 {
+  section.features div.features-inside div.feature-block:last-of-type .feature-text h1 {
     margin-bottom: 40px;
     text-align: center;
   }
-  section.features .features-inside .feature-block:last-of-type .feature-text p {
+  section.features div.features-inside div.feature-block:last-of-type .feature-text p {
     margin-bottom: 55px;
   }
-  section.features .features-inside .feature-block:first-of-type {
+  section.features div.features-inside div.feature-block:first-of-type {
     padding-bottom: 100px;
     background: none;
     display: flex;
     flex-direction: column;
     margin-bottom: 0;
   }
-  section.features .features-inside .feature-block:first-of-type .feature-images {
+  section.features div.features-inside div.feature-block:first-of-type div.feature-images {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -301,48 +301,47 @@ body {
     width: 100%;
     max-width: 100% !important;
   }
-  section.features .features-inside .feature-block:first-of-type .feature-images img {
+  section.features div.features-inside div.feature-block:first-of-type div.feature-images img {
     margin: 0;
     padding: 0;
-  }
-  section.features .features-inside .feature-block:first-of-type .feature-images img {
+    max-width: 80%;
+    width: 80%;
     position: static !important;
     margin: 0;
     bottom: 0;
     left: 0;
   }
-  section.features .features-inside .feature-block:first-of-type .line-images {
+  section.features div.features-inside div.feature-block:first-of-type .line-images {
     display: none;
   }
-  section.features .features-inside .feature-block:first-of-type > img.feature-block-icons {
+  section.features div.features-inside div.feature-block:first-of-type > img.feature-block-icons {
     display: block;
     width: 100%;
     order: 1;
   }
-  section.features .features-inside .feature-block:first-of-type .feature-text {
+  section.features div.features-inside div.feature-block:first-of-type .feature-text {
     width: 90%;
     max-width: 90%;
     margin: 0 auto;
   }
-  section.features .features-inside .feature-block .feature-text {
+  section.features div.features-inside div.feature-block .feature-text {
     width: 100%;
   }
-  section.features .features-inside .feature-block .feature-text h1 {
-    font-size: 48px;
-    line-height: 48px;
+  section.features div.features-inside div.feature-block .feature-text h1 {
     text-align: center;
     font-size: 30px;
+    line-height: 30px;
     text-shadow: 3px 1px 0 #000, 2.7717px 2.1481px 0 #000, 2.1213px 3.1213px 0 #000, 1.1481px 3.7717px 0 #000, 0px 4px 0 #000, -1.1481px 3.7717px 0 #000, -2.1213px 3.1213px 0 #000, -2.7717px 2.1481px 0 #000, -3px 1px 0 #000, -2.7717px -0.1481px 0 #000, -2.1213px -1.1213px 0 #000, -1.1481px -1.7717px 0 #000, 0px -2px 0 #000, 1.1481px -1.7717px 0 #000, 2.1213px -1.1213px 0 #000, 2.7717px -0.1481px 0 #000;
   }
-  section.features .features-inside .feature-block .feature-text p {
+  section.features div.features-inside div.feature-block .feature-text p {
     font-size: 18px;
     margin-bottom: 10px;
     text-align: center;
   }
-  section.features .features-inside .feature-block img:first-of-type {
+  section.features div.features-inside div.feature-block img:first-of-type {
     margin-bottom: 40px;
   }
-  section.features .features-inside .cards {
+  section.features div.features-inside .cards {
     margin-bottom: 100px;
     position: static !important;
     flex-direction: column;
@@ -352,15 +351,15 @@ body {
     flex-direction: column;
     align-items: center;
   }
-  section.features .features-inside .cards li {
+  section.features div.features-inside .cards li {
     width: 100% !important;
     max-width: 345px;
     margin-bottom: 35px;
   }
-  section.features .features-inside .cards li img {
+  section.features div.features-inside .cards li img {
     max-width: 100%;
   }
-  section.features .features-inside .cards li p {
+  section.features div.features-inside .cards li p {
     width: 100%;
     line-height: 25px;
     text-align: center !important;
@@ -518,6 +517,7 @@ body {
   }
   section.downloads div.downloads-inside header.downloads-header h1 {
     font-size: 30px;
+    line-height: 30px;
     text-shadow: 3px 1px 0 #000, 2.7717px 2.1481px 0 #000, 2.1213px 3.1213px 0 #000, 1.1481px 3.7717px 0 #000, 0px 4px 0 #000, -1.1481px 3.7717px 0 #000, -2.1213px 3.1213px 0 #000, -2.7717px 2.1481px 0 #000, -3px 1px 0 #000, -2.7717px -0.1481px 0 #000, -2.1213px -1.1213px 0 #000, -1.1481px -1.7717px 0 #000, 0px -2px 0 #000, 1.1481px -1.7717px 0 #000, 2.1213px -1.1213px 0 #000, 2.7717px -0.1481px 0 #000;
   }
   section.downloads div.downloads-inside .coins-list li img {
