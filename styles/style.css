@@ -55,6 +55,7 @@ body {
 @media (max-width: 375px) {
   .popup {
     max-width: 340px;
+    width: 80%;
   }
 }
 .popup {
@@ -65,7 +66,7 @@ body {
   padding: 35px 40px 40px 40px;
   background: #423b2b;
   border: 7px solid #5d5347;
-  max-width: 405px;
+  width: 405px;
   box-sizing: border-box;
   border-radius: 14px;
 }
@@ -264,12 +265,17 @@ body {
   section.features .features-inside .feature-block:last-of-type .feature-block-image-wrap img:first-of-type {
     margin: 0;
   }
+  section.features .features-inside .feature-block:last-of-type .feature-block-image-wrap img.image-text {
+    max-width: 205px;
+    filter: drop-shadow(0.9px 0.4px 0 #000) drop-shadow(0.86195px 0.59135px 0 #000) drop-shadow(0.75355px 0.75355px 0 #000) drop-shadow(0.59135px 0.86195px 0 #000) drop-shadow(0.4px 0.9px 0 #000) drop-shadow(0.20865px 0.86195px 0 #000) drop-shadow(0.04645px 0.75355px 0 #000) drop-shadow(-0.06195px 0.59135px 0 #000) drop-shadow(-0.1px 0.4px 0 #000) drop-shadow(-0.06195px 0.20865px 0 #000) drop-shadow(0.04645px 0.04645px 0 #000) drop-shadow(0.20865px -0.06195px 0 #000) drop-shadow(0.4px -0.1px 0 #000) drop-shadow(0.59135px -0.06195px 0 #000) drop-shadow(0.75355px 0.04645px 0 #000) drop-shadow(0.86195px 0.20865px 0 #000);
+  }
   section.features .features-inside .feature-block:last-of-type img.features-icon {
     display: none !important;
   }
   section.features .features-inside .feature-block:last-of-type .feature-text {
-    width: 100%;
-    max-width: 100%;
+    width: 90%;
+    max-width: 90%;
+    margin: 0 auto;
     text-align: center;
   }
   section.features .features-inside .feature-block:last-of-type .feature-text h1 {
@@ -325,6 +331,8 @@ body {
     font-size: 48px;
     line-height: 48px;
     text-align: center;
+    font-size: 30px;
+    text-shadow: 3px 1px 0 #000, 2.7717px 2.1481px 0 #000, 2.1213px 3.1213px 0 #000, 1.1481px 3.7717px 0 #000, 0px 4px 0 #000, -1.1481px 3.7717px 0 #000, -2.1213px 3.1213px 0 #000, -2.7717px 2.1481px 0 #000, -3px 1px 0 #000, -2.7717px -0.1481px 0 #000, -2.1213px -1.1213px 0 #000, -1.1481px -1.7717px 0 #000, 0px -2px 0 #000, 1.1481px -1.7717px 0 #000, 2.1213px -1.1213px 0 #000, 2.7717px -0.1481px 0 #000;
   }
   section.features .features-inside .feature-block .feature-text p {
     font-size: 18px;
@@ -501,6 +509,19 @@ body {
   .features .features-inside .feature-block:first-of-type .feature-images {
     left: 1200px;
     right: auto;
+  }
+}
+@media (max-width: 485px) {
+  section.downloads div.downloads-inside header.downloads-header {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  section.downloads div.downloads-inside header.downloads-header h1 {
+    font-size: 30px;
+    text-shadow: 3px 1px 0 #000, 2.7717px 2.1481px 0 #000, 2.1213px 3.1213px 0 #000, 1.1481px 3.7717px 0 #000, 0px 4px 0 #000, -1.1481px 3.7717px 0 #000, -2.1213px 3.1213px 0 #000, -2.7717px 2.1481px 0 #000, -3px 1px 0 #000, -2.7717px -0.1481px 0 #000, -2.1213px -1.1213px 0 #000, -1.1481px -1.7717px 0 #000, 0px -2px 0 #000, 1.1481px -1.7717px 0 #000, 2.1213px -1.1213px 0 #000, 2.7717px -0.1481px 0 #000;
+  }
+  section.downloads div.downloads-inside .coins-list li img {
+    max-width: 90%;
   }
 }
 .page-header {
@@ -804,7 +825,7 @@ section.features .feature-block:last-of-type .feature-block-image-wrap img.image
   transition: all 1s ease-in-out;
   opacity: 0;
   left: 15%;
-  filter: drop-shadow(1px 0px 0 #000) drop-shadow(0.9239px 0.3827px 0 #000) drop-shadow(0.7071px 0.7071px 0 #000) drop-shadow(0.3827px 0.9239px 0 #000) drop-shadow(0px 1px 0 #000) drop-shadow(0.1173px 0.9239px 0 #000) drop-shadow(-0.2071px 0.7071px 0 #000) drop-shadow(-0.4239px 0.3827px 0 #000) drop-shadow(-0.5px 0px 0 #000) drop-shadow(-0.4239px -0.3827px 0 #000) drop-shadow(-0.2071px -0.7071px 0 #000) drop-shadow(0.1173px 0.0761px 0 #000) drop-shadow(0px -1px 0 #000) drop-shadow(0.3827px 0.0761px 0 #000) drop-shadow(0.7071px 0.2929px 0 #000) drop-shadow(0.9239px 0.6173px 0 #000);
+  filter: drop-shadow(1.2px 0.3px 0 #000) drop-shadow(1.1239px 0.6827px 0 #000) drop-shadow(0.9071px 1.0071px 0 #000) drop-shadow(0.5827px 1.2239px 0 #000) drop-shadow(0.2px 1.3px 0 #000) drop-shadow(-0.1827px 1.2239px 0 #000) drop-shadow(-0.5071px 1.0071px 0 #000) drop-shadow(-0.7239px 0.6827px 0 #000) drop-shadow(-0.8px 0.3px 0 #000) drop-shadow(-0.7239px -0.0827px 0 #000) drop-shadow(-0.5071px -0.4071px 0 #000) drop-shadow(-0.1827px -0.6239px 0 #000) drop-shadow(0.2px -0.7px 0 #000) drop-shadow(0.5827px -0.6239px 0 #000) drop-shadow(0.9071px -0.4071px 0 #000) drop-shadow(1.1239px -0.0827px 0 #000);
 }
 section.features .feature-block:last-of-type .feature-text {
   max-width: 50%;

@@ -31,25 +31,47 @@ body {
     ($width * 0.9239) ($width * -0.3827 + $offset) 0 $color;
 }
 
-@mixin stroke-drop-shadow($color, $width, $offset) {
-  filter: drop-shadow(($width) ($width * 0 + $offset) 0 $color)
-    drop-shadow(($width * 0.9239) ($width * 0.3827 + $offset) 0 $color)
-    drop-shadow(($width * 0.7071) ($width * 0.7071 + $offset) 0 $color)
-    drop-shadow(($width * 0.3827) ($width * 0.9239 + $offset) 0 $color)
-    drop-shadow(($width * 0) ($width * 1 + $offset) 0 $color)
-    drop-shadow(($width * -0.3827 + 0.5) ($width * 0.9239 + $offset) 0 $color)
-    drop-shadow(($width * -0.7071 + 0.5) ($width * 0.7071 + $offset) 0 $color)
-    drop-shadow(($width * -0.9239 + 0.5) ($width * 0.3827 + $offset) 0 $color)
-    drop-shadow(($width * -1 + 0.5) ($width * 0 + $offset) 0 $color)
-    drop-shadow(($width * -0.9239 + 0.5) ($width * -0.3827 + $offset) 0 $color)
-    drop-shadow(($width * -0.7071+ 0.5) ($width * -0.7071 + $offset) 0 $color)
+@mixin stroke-drop-shadow($color, $width, $offsetX, $offsetY) {
+  filter: drop-shadow(($width + $offsetX) ($width * 0 + $offsetY) 0 $color)
     drop-shadow(
-      ($width * -0.3827+ 0.5) ($width * -0.9239 + 1 + $offset) 0 $color
+      ($width * 0.9239 + $offsetX) ($width * 0.3827 + $offsetY) 0 $color
     )
-    drop-shadow(($width * 0) ($width * -1 + $offset) 0 $color)
-    drop-shadow(($width * 0.3827) ($width * -0.9239+ 1 + $offset) 0 $color)
-    drop-shadow(($width * 0.7071) ($width * -0.7071+ 1 + $offset) 0 $color)
-    drop-shadow(($width * 0.9239) ($width * -0.3827+ 1 + $offset) 0 $color);
+    drop-shadow(
+      ($width * 0.7071 + $offsetX) ($width * 0.7071 + $offsetY) 0 $color
+    )
+    drop-shadow(
+      ($width * 0.3827 + $offsetX) ($width * 0.9239 + $offsetY) 0 $color
+    )
+    drop-shadow(($width * 0 + $offsetX) ($width * 1 + $offsetY) 0 $color)
+    drop-shadow(
+      ($width * -0.3827 + $offsetX) ($width * 0.9239 + $offsetY) 0 $color
+    )
+    drop-shadow(
+      ($width * -0.7071 + $offsetX) ($width * 0.7071 + $offsetY) 0 $color
+    )
+    drop-shadow(
+      ($width * -0.9239 + $offsetX) ($width * 0.3827 + $offsetY) 0 $color
+    )
+    drop-shadow(($width * -1 + $offsetX) ($width * 0 + $offsetY) 0 $color)
+    drop-shadow(
+      ($width * -0.9239 + $offsetX) ($width * -0.3827 + $offsetY) 0 $color
+    )
+    drop-shadow(
+      ($width * -0.7071 + $offsetX) ($width * -0.7071 + $offsetY) 0 $color
+    )
+    drop-shadow(
+      ($width * -0.3827 + $offsetX) ($width * -0.9239 + $offsetY) 0 $color
+    )
+    drop-shadow(($width * 0 + $offsetX) ($width * -1 + $offsetY) 0 $color)
+    drop-shadow(
+      ($width * 0.3827 + $offsetX) ($width * -0.9239 + $offsetY) 0 $color
+    )
+    drop-shadow(
+      ($width * 0.7071 + $offsetX) ($width * -0.7071 + $offsetY) 0 $color
+    )
+    drop-shadow(
+      ($width * 0.9239 + $offsetX) ($width * -0.3827 + $offsetY) 0 $color
+    );
   // filter: drop-shadow(($width * 1) ($width * 0 + $offset) 0 $color)
   //   drop-shadow(($width * 0) ($width * 1 + $offset) 0 $color)
   //   drop-shadow(($width * -1) ($width * 0 + $offset) 0 $color)
@@ -106,6 +128,7 @@ body {
 @media (max-width: 375px) {
   .popup {
     max-width: 340px;
+    width: 80%;
   }
 }
 
@@ -117,7 +140,7 @@ body {
   padding: 35px 40px 40px 40px;
   background: #423b2b;
   border: 7px solid #5d5347;
-  max-width: 405px;
+  width: 405px;
   box-sizing: border-box;
   border-radius: 14px;
   h1 {

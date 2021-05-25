@@ -109,13 +109,18 @@
               margin: 0;
               // width: 100%;
             }
+            img.image-text {
+              max-width: 205px;
+              @include stroke-drop-shadow(#000, 0.5px, 0.4, 0.4);
+            }
           }
           img.features-icon {
             display: none !important;
           }
           .feature-text {
-            width: 100%;
-            max-width: 100%;
+            width: 90%;
+            max-width: 90%;
+            margin: 0 auto;
             text-align: center;
             h1 {
               margin-bottom: 40px;
@@ -174,6 +179,8 @@
             font-size: 48px;
             line-height: 48px;
             text-align: center;
+            font-size: 30px;
+            @include stroke(#000, 3px, 1);
           }
           p {
             font-size: 18px;
@@ -452,6 +459,28 @@
         .feature-images {
           left: 1200px;
           right: auto;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 485px) {
+  section.downloads {
+    div.downloads-inside {
+      header.downloads-header {
+        max-width: 90%;
+        margin: 0 auto;
+        h1 {
+          font-size: 30px;
+          @include stroke(#000, 3px, 1);
+        }
+      }
+      .coins-list {
+        li {
+          img {
+            max-width: 90%;
+          }
         }
       }
     }

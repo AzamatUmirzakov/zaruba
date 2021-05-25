@@ -159,7 +159,7 @@ section.features {
           transition: all 1s ease-in-out;
           opacity: 0;
           left: 15%;
-          @include stroke-drop-shadow(#000, 1px, 0);
+          @include stroke-drop-shadow(#000, 1px, 0.2, 0.3);
           // transform: skewX(-2deg);
         }
       }
