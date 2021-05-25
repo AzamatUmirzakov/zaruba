@@ -18,10 +18,15 @@ function adaptivity() {
     }px`;
   }
 
-  if (document.documentElement.clientWidth > 1270)
+  if (document.documentElement.clientWidth > 1070)
     for (let item of document.querySelectorAll(".feature-block")) {
-      item.style.paddingLeft = margin;
-      item.style.paddingRight = margin;
+      if (parseFloat(margin) > 20) {
+        item.style.paddingLeft = margin;
+        item.style.paddingRight = margin;
+      } else {
+        item.style.paddingLeft = "20px";
+        item.style.paddingRight = "20px";
+      }
     }
   else {
     for (let item of document.querySelectorAll(".feature-block")) {
