@@ -248,7 +248,9 @@ function feature_images_animate() {
 }
 
 function feature_text_animate() {
-  let feature_block = document.querySelector(".feature-block:last-of-type");
+  let feature_block = document.querySelector(
+    ".features-inside > .feature-block"
+  );
   let feature_text = feature_block.querySelector("img.image-text");
   let scroll_y = window.pageYOffset;
   if (
