@@ -841,7 +841,7 @@ section.features .features-inside > .feature-block .feature-block-image-wrap img
   transition: all 1s ease-in-out;
   opacity: 0;
   left: 15%;
-  filter: drop-shadow(1.2px 0.3px 0 #000) drop-shadow(1.1239px 0.6827px 0 #000) drop-shadow(0.9071px 1.0071px 0 #000) drop-shadow(0.5827px 1.2239px 0 #000) drop-shadow(0.2px 1.3px 0 #000) drop-shadow(-0.1827px 1.2239px 0 #000) drop-shadow(-0.5071px 1.0071px 0 #000) drop-shadow(-0.7239px 0.6827px 0 #000) drop-shadow(-0.8px 0.3px 0 #000) drop-shadow(-0.7239px -0.0827px 0 #000) drop-shadow(-0.5071px -0.4071px 0 #000) drop-shadow(-0.1827px -0.6239px 0 #000) drop-shadow(0.2px -0.7px 0 #000) drop-shadow(0.5827px -0.6239px 0 #000) drop-shadow(0.9071px -0.4071px 0 #000) drop-shadow(1.1239px -0.0827px 0 #000);
+  filter: drop-shadow(1.4px 0.6px 0 #000) drop-shadow(1.3239px 0.9827px 0 #000) drop-shadow(1.1071px 1.3071px 0 #000) drop-shadow(0.7827px 1.5239px 0 #000) drop-shadow(0.4px 1.6px 0 #000) drop-shadow(0.0173px 1.5239px 0 #000) drop-shadow(-0.3071px 1.3071px 0 #000) drop-shadow(-0.5239px 0.9827px 0 #000) drop-shadow(-0.6px 0.6px 0 #000) drop-shadow(-0.5239px 0.2173px 0 #000) drop-shadow(-0.3071px -0.1071px 0 #000) drop-shadow(0.0173px -0.3239px 0 #000) drop-shadow(0.4px -0.4px 0 #000) drop-shadow(0.7827px -0.3239px 0 #000) drop-shadow(1.1071px -0.1071px 0 #000) drop-shadow(1.3239px 0.2173px 0 #000);
 }
 section.features .features-inside > .feature-block .feature-text {
   max-width: 50%;

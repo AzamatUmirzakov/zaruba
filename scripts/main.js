@@ -62,6 +62,15 @@ function adaptivity() {
 
   let nav_adaptive_button = document.querySelector(".nav-adaptive button");
   nav_adaptive_button.addEventListener("click", () => {});
+
+  // downloads wave
+
+  let downloads = document.querySelector(".downloads");
+  let downloads_inside = downloads.querySelector(".downloads-inside");
+  let wave = downloads.querySelector(".wave");
+
+  downloads.style.paddingTop =
+    parseFloat(getComputedStyle(wave).height) + 10 + "px";
 }
 
 setInterval(adaptivity, 100);
