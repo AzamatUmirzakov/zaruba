@@ -271,9 +271,6 @@ document.querySelector(".header-image").style.right = "0px";
 document.querySelector(".header-text").style.opacity = "1";
 document.querySelector(".header-text h1").style.bottom = "0";
 document.querySelector(".header-text p").style.bottom = "0";
-//
-// animating cards
-// };
 
 function cards_animate() {
   let scroll_y = window.pageYOffset;
@@ -330,3 +327,25 @@ document.addEventListener("scroll", feature_text_animate);
 cards_animate();
 feature_images_animate();
 feature_text_animate();
+
+let menu_button = document.querySelector(".nav-adaptive button");
+
+menu_button.addEventListener("click", () => {
+  if (menu_button.dataset.status == "hidden") {
+    menu_button.dataset.status = "active";
+    document.querySelector(".nav-left").style.top = "0px";
+    document.documentElement.style.overflow = "hidden";
+    // document.querySelector(".darken").style.display = "block";
+    document.querySelector(".darken").style.zIndex = "20";
+    document.querySelector(".darken").style.opacity = "0.5";
+  } else {
+    menu_button.dataset.status = "hidden";
+    document.querySelector(".nav-left").style.top = "";
+    document.documentElement.style.overflow = "";
+    document.querySelector(".darken").style.zIndex = "-10";
+    document.querySelector(".darken").style.opacity = "0";
+    // document.querySelector(".darken").ontransitionend = function () {
+    //   document.querySelector(".darken").style.display = "block";
+    // };
+  }
+});

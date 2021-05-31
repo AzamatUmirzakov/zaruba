@@ -6,6 +6,17 @@
 }
 
 @media (max-width: 1070px) {
+  body .darken {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh !important;
+    background: #000;
+    z-index: -10;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
   header.page-header {
     div.wave {
       height: 110px;
@@ -18,11 +29,29 @@
       .header-nav {
         position: relative;
         padding: 0;
+        z-index: 50;
         .nav-right {
           display: none !important;
         }
         .nav-left {
-          display: none;
+          display: flex;
+          flex-direction: column;
+          width: 100vw;
+          box-sizing: border-box;
+          padding: 20px;
+          position: fixed;
+          top: -300px;
+          left: 0;
+          background: #423b2b;
+          z-index: 30;
+          transition: all 0.5s ease-in-out;
+          a {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 20px 0;
+            border-bottom: 1px solid #a49982;
+            text-align: center;
+          }
           .nav-logo {
             display: none;
           }
@@ -33,10 +62,18 @@
           align-items: center;
           justify-content: space-between;
           padding: 8px 16px 0 16px;
+          position: relative;
           button {
+            width: 30px;
+            height: 30px;
             background: transparent;
             border: none;
             outline: none;
+            z-index: 50;
+            position: relative;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
             &:hover {
               cursor: pointer;
             }
