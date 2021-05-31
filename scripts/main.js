@@ -336,7 +336,7 @@ menu_button.addEventListener("click", () => {
     document.querySelector(".nav-left").style.top = "0px";
     document.documentElement.style.overflow = "hidden";
     // document.querySelector(".darken").style.display = "block";
-    document.querySelector(".darken").style.zIndex = "20";
+    document.querySelector(".darken").style.zIndex = "30";
     document.querySelector(".darken").style.opacity = "0.5";
   } else {
     menu_button.dataset.status = "hidden";

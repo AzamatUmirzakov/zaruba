@@ -292,6 +292,14 @@ body {
   header.page-header .header-inside .header-main .header-text .download-button:hover {
     cursor: pointer;
   }
+  header.page-header .header-inside .header-main .header-text .yellow-button {
+    padding: 20px 37px;
+    font-size: 18px;
+    text-shadow: 2px 1px 0 #000, 1.8478px 1.7654px 0 #000, 1.4142px 2.4142px 0 #000, 0.7654px 2.8478px 0 #000, 0px 3px 0 #000, -0.7654px 2.8478px 0 #000, -1.4142px 2.4142px 0 #000, -1.8478px 1.7654px 0 #000, -2px 1px 0 #000, -1.8478px 0.2346px 0 #000, -1.4142px -0.4142px 0 #000, -0.7654px -0.8478px 0 #000, 0px -1px 0 #000, 0.7654px -0.8478px 0 #000, 1.4142px -0.4142px 0 #000, 1.8478px 0.2346px 0 #000;
+    border-radius: 10px;
+    max-width: 230px;
+    margin: 0 auto;
+  }
   header.page-header .header-inside .header-main .header-image {
     display: none;
   }
