@@ -1,7 +1,7 @@
 section.features {
   background: linear-gradient(180deg, #edb613 0%, #eda00b 100%);
   background-size: cover;
-  padding: 180px 0;
+  padding-bottom: 180px;
   position: relative;
   z-index: 20;
   .features-inside {
@@ -10,30 +10,25 @@ section.features {
     position: relative;
     z-index: 20;
     .cards {
-      z-index: 20;
-      position: absolute;
       display: flex;
       justify-content: space-between;
       // max-width: 1215px;
       width: 100%;
-      z-index: 10;
-      left: 0;
-      right: 0;
+      margin-bottom: 170px;
       li {
         opacity: 0;
         transition: all 1s ease-in-out;
         &:nth-of-type(1) {
           bottom: -50px;
           img {
-            bottom: 10px;
             left: -30px;
+            bottom: 60px;
           }
         }
         &:nth-of-type(2) {
           bottom: -100px;
           img {
             max-width: 230px;
-            bottom: 90px;
           }
         }
         &:nth-of-type(3) {
@@ -52,19 +47,18 @@ section.features {
         padding: 0 32px;
         padding-bottom: 50px;
         position: relative;
-        max-height: 256px;
         width: 32%;
         box-sizing: border-box;
-        padding-top: 176px;
+        padding-top: 250px;
         display: flex;
         align-items: flex-end;
         z-index: 20;
-        p {
-          text-align: left;
+        button {
+          width: 100%;
         }
         img {
           position: absolute;
-          bottom: 100px;
+          bottom: 140px;
           left: 0;
           z-index: 20;
         }
@@ -92,7 +86,7 @@ section.features {
   }
   .feature-block-parent {
     position: relative;
-    margin-bottom: 170px;
+    top: -200px;
     .feature-block {
       background-image: url("../assets/feature-block-line.svg");
       background-size: contain;

@@ -191,12 +191,14 @@ body {
       margin-top: 40px;
     }
   }
-  .login-text {
+  & > p {
     font-size: 18px;
     font-family: "Balsamiq Sans Regular";
     margin-top: 22px;
     color: #fff;
-    button {
+    button,
+    a {
+      text-decoration: none;
       border: none;
       outline: none;
       background: transparent;

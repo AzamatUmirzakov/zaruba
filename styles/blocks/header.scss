@@ -86,16 +86,26 @@
   .header-main {
     margin-top: 230px;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     .header-text {
+      text-align: center;
       opacity: 0;
       transition: all 1s ease-in-out;
-      button {
+      button.registration-button {
         z-index: 20;
         position: relative;
         transition: box-shadow 0.3s ease-in-out;
-        &:focus {
+        padding: 50px 100px;
+        font-size: 40px;
+        @include stroke(#000, 3px, 2);
+        box-shadow: inset 30px 0px 10px 0px #ffdc30,
+          inset -16px -60px 10px 5px rgba(247, 171, 22, 0.6);
+        filter: drop-shadow(0px 8px 0px rgba(0, 0, 0, 0.25));
+        border-radius: 20px;
+        &:focus,
+        &:hover {
           // transition: all 0.3s ease-in-out;
           background: #ffdc30;
           box-shadow: none;
@@ -113,7 +123,7 @@
         bottom: -80px;
         transition: all 1s ease-in-out;
         img {
-          &:first-of-type {
+          &:nth-of-type(2) {
             display: none;
           }
           vertical-align: bottom;
@@ -126,7 +136,6 @@
         font-size: 18px;
         line-height: 25px;
         color: #fff;
-        max-width: 335px;
         margin-bottom: 54px;
         position: relative;
         bottom: -50px;
@@ -142,7 +151,7 @@
       right: -100px;
       transition: all 1s ease-in-out;
       display: inline-block;
-      max-width: 560px;
+      margin-bottom: 40px;
       img {
         max-width: 100%;
       }

@@ -142,6 +142,16 @@ function show_popup() {
   header.innerHTML = "Регистрация";
   let form = document.createElement("form");
   form.name = "registration-form";
+  //email
+  let email = document.createElement("label");
+  email.innerHTML = "E-mail";
+  email.htmlFor = "email";
+  let email_input = document.createElement("input");
+  email_input.type = "email";
+  email_input.placeholder = "E-mail";
+  email_input.name = "email";
+  email.append(email_input);
+
   // nickname
   let nickname = document.createElement("label");
   nickname.innerHTML = "Никнейм";
@@ -160,13 +170,25 @@ function show_popup() {
   password_input.placeholder = "Пароль";
   password_input.name = "password";
   password.append(password_input);
+  // repeat password
+
+  let repeat_password = document.createElement("label");
+  repeat_password.innerHTML = "Повторите пароль";
+  repeat_password.htmlFor = "repeat-password";
+  let repeat_password_input = document.createElement("input");
+  repeat_password_input.type = "password";
+  repeat_password_input.placeholder = "Повторите пароль";
+  repeat_password_input.name = "repeat-password";
+  repeat_password.append(repeat_password_input);
   // submit button
   let button = document.createElement("button");
   button.type = "submit";
   button.className = "yellow-button";
   button.innerHTML = "Зарегистрироваться";
+  form.append(email);
   form.append(nickname);
   form.append(password);
+  form.append(repeat_password);
   form.append(button);
 
   // login link
@@ -181,19 +203,43 @@ function show_popup() {
     if (login_link.dataset.status == "to-login") {
       let popup = document.querySelector(".popup");
       popup.querySelector("h1").innerHTML = "Вход";
+      popup.querySelector("label[for='email']").style.display = "none";
+      popup.querySelector("label[for='repeat-password']").style.display =
+        "none";
       popup.querySelector("p span").innerHTML = "Нет аккаунта? ";
       popup.querySelector("p button").innerHTML = "Регистрация";
       popup.querySelector("form button").innerHTML = "Войти";
+      let forgot_password = document.createElement("p");
+      forgot_password.className = "forgot-password";
+      forgot_password.innerHTML = "Забыли пароль? ";
+      forgot_password.append(document.createElement("a"));
+      forgot_password.querySelector("a").innerHTML = "Напомнить";
+      popup.append(forgot_password);
       form.name = "login-form";
       login_link.dataset.status = "to-registration";
+      popup.style.left =
+        document.documentElement.clientWidth / 2 - popup.offsetWidth / 2 + "px";
+      popup.style.top =
+        document.documentElement.clientHeight / 2 -
+        popup.offsetHeight / 2 +
+        "px";
     } else {
       let popup = document.querySelector(".popup");
       popup.querySelector("h1").innerHTML = "Регистрация";
+      popup.querySelector("label[for='email']").style.display = "";
+      popup.querySelector("label[for='repeat-password']").style.display = "";
       popup.querySelector("p span").innerHTML = "Уже есть аккаунт? ";
       popup.querySelector("p button").innerHTML = "Войти";
       popup.querySelector("form button").innerHTML = "Зарегистрироваться";
       form.name = "registration-form";
       login_link.dataset.status = "to-login";
+      popup.querySelector(".forgot-password").remove();
+      popup.style.left =
+        document.documentElement.clientWidth / 2 - popup.offsetWidth / 2 + "px";
+      popup.style.top =
+        document.documentElement.clientHeight / 2 -
+        popup.offsetHeight / 2 +
+        "px";
     }
   });
   login_text.append(login_link);

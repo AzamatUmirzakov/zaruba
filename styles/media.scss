@@ -61,8 +61,14 @@
             line-height: 48px;
             text-align: center;
             max-width: 350px;
+            margin-left: auto;
+            margin-right: auto;
+            @include stroke(#000, 3px, 2px);
+            img:first-of-type {
+              display: none;
+            }
             img {
-              display: inline !important;
+              display: inline;
               height: 30px;
               width: 24px;
               vertical-align: bottom;
@@ -94,6 +100,9 @@
   section.features {
     padding: 0 !important;
     div.features-inside {
+      .feature-block-parent {
+        top: 0;
+      }
       div.feature-block {
         display: flex;
         flex-direction: column;

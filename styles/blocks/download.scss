@@ -114,8 +114,34 @@ footer.page-footer {
   padding: 42px 20px;
   text-align: center;
   .footer-icons {
+    margin-bottom: 10px;
     a:not(:last-of-type) {
       margin-right: 20px;
+    }
+  }
+  .license {
+    font-size: 18px;
+    font-family: "Balsamiq Sans Regular";
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: #fff;
+      transition: all 0.3s ease-in-out;
+      opacity: 0;
+    }
+    &:hover,
+    &:active {
+      &::before {
+        bottom: -1px;
+        opacity: 1;
+      }
     }
   }
 }
