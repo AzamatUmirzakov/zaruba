@@ -141,6 +141,8 @@ body {
   background: #423b2b;
   border: 7px solid #5d5347;
   width: 405px;
+  max-height: 100vh;
+  overflow-y: auto;
   box-sizing: border-box;
   border-radius: 14px;
   h1 {
@@ -207,6 +209,9 @@ body {
       color: #2fa8ff;
       cursor: pointer;
     }
+  }
+  .forgot-password {
+    margin-top: 5px;
   }
 }
 
