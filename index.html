@@ -8,6 +8,45 @@
     <title>Zaruba</title>
   </head>
   <body>
+    <div class="popup" id="unblurred">
+      <div class="registration">
+        <h1>Регистрация</h1>
+        <form action="" name="registration-form">
+          <label for="email">E-mail</label>
+          <input type="email" name="email" placeholder="E-mail" />
+          <label for="nickname">Никнейм</label>
+          <input type="text" placeholder="Никнейм" name="nickname" />
+          <label for="password">Пароль</label>
+          <input type="password" name="password" placeholder="Пароль" />
+          <label for="repeat-password">Повторите пароль</label>
+          <input
+            type="password"
+            name="repeat-password"
+            placeholder="Повторите пароль"
+          />
+          <button type="submit" class="yellow-button">
+            Зарегистрироваться
+          </button>
+          <p class="login-text">
+            <span>Уже есть аккаунт? </span><button type="button">Войти</button>
+          </p>
+        </form>
+      </div>
+      <div class="login">
+        <h1>Вход</h1>
+        <form action="" name="login-form">
+          <label for="nickname">Никнейм</label>
+          <input type="text" name="email" placeholder="Никнейм" />
+          <label for="password">Пароль</label>
+          <input type="password" name="password" placeholder="Пароль" />
+          <button type="submit" class="yellow-button">Войти</button>
+          <p class="registration-text">
+            <span>Нет аккаунта? </span
+            ><button type="button">Регистрация</button>
+          </p>
+        </form>
+      </div>
+    </div>
     <header class="page-header">
       <div class="darken"></div>
       <div class="header-inside center">

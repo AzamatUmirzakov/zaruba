@@ -79,11 +79,11 @@ body {
   color: #fff;
   margin-bottom: 30px;
 }
-.popup form {
+.popup div form {
   display: flex;
   flex-direction: column;
 }
-.popup form label {
+.popup div form label {
   display: flex;
   flex-direction: column;
   font-family: "Balsamiq Sans Regular";
@@ -91,10 +91,7 @@ body {
   line-height: 22px;
   color: #fff;
 }
-.popup form label:not(:last-of-type) {
-  margin-bottom: 20px;
-}
-.popup form label input {
+.popup div form input {
   margin-top: 10px;
   padding: 16px 22px;
   border: none;
@@ -106,28 +103,31 @@ body {
   border-radius: 10px;
   border: 3px solid transparent;
 }
-.popup form label input::placeholder {
+.popup div form input:not(:last-of-type) {
+  margin-bottom: 20px;
+}
+.popup div form input::placeholder {
   color: #96948b;
   font-family: "Balsamiq Sans Regular";
   font-size: 18px;
 }
-.popup form label input:focus {
+.popup div form input:focus {
   border-color: #98856e;
 }
-.popup form label input:focus::placeholder {
+.popup div form input:focus::placeholder {
   color: #fff;
 }
-.popup form .yellow-button {
+.popup div form .yellow-button {
   margin-top: 40px;
 }
-.popup > p {
+.popup div p {
   font-size: 18px;
   font-family: "Balsamiq Sans Regular";
   margin-top: 22px;
   color: #fff;
 }
-.popup > p button,
-.popup > p a {
+.popup div p button,
+.popup div p a {
   text-decoration: none;
   border: none;
   outline: none;
@@ -136,6 +136,9 @@ body {
   font-size: 18px;
   color: #2fa8ff;
   cursor: pointer;
+}
+.popup .login {
+  display: none;
 }
 .popup .forgot-password {
   margin-top: 5px;

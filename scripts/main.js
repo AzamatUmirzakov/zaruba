@@ -115,16 +115,22 @@ function show_popup() {
     }
   }
   document.body.style.overflow = "hidden";
-  let popup = document.createElement("div");
-  popup.className = "popup";
-  popup.id = "unblurred";
+  let popup = document.querySelector("div.popup");
+  let show_login = popup.querySelector(".login-text button");
+  show_login.addEventListener("click", () => {
+    popup.querySelector("div.registration").style.display = "none";
+    popup.querySelector("div.login").style.display = "block";
+  });
+  let show_registration = popup.querySelector(".registration-text button");
+  show_registration.addEventListener("click", () => {
+    popup.querySelector("div.login").style.display = "none";
+    popup.querySelector("div.registration").style.display = "block";
+  });
 
   document.querySelector(".wave img").src = "assets/wave-up-blue.png";
-
   document.querySelector(".features").style.background = "#250f5e";
-  // document.querySelector(".features").style.background = "#26105f";
-
   document.querySelector(".page-footer").style.background = "#2d1371";
+
   Array.from(document.querySelectorAll(".wave"))[1].querySelector("img").src =
     "assets/wave-bottom-blue.svg";
 
@@ -138,114 +144,6 @@ function show_popup() {
 
   let popup_bg = document.createElement("div");
   popup_bg.className = "popup-bg";
-  let header = document.createElement("h1");
-  header.innerHTML = "Регистрация";
-  let form = document.createElement("form");
-  form.name = "registration-form";
-  //email
-  let email = document.createElement("label");
-  email.innerHTML = "E-mail";
-  email.htmlFor = "email";
-  let email_input = document.createElement("input");
-  email_input.type = "email";
-  email_input.placeholder = "E-mail";
-  email_input.name = "email";
-  email.append(email_input);
-
-  // nickname
-  let nickname = document.createElement("label");
-  nickname.innerHTML = "Никнейм";
-  nickname.htmlFor = "nickname";
-  let nickname_input = document.createElement("input");
-  nickname_input.type = "text";
-  nickname_input.placeholder = "Никнейм";
-  nickname_input.name = "nickname";
-  nickname.append(nickname_input);
-  // password
-  let password = document.createElement("label");
-  password.innerHTML = "Пароль";
-  password.htmlFor = "password";
-  let password_input = document.createElement("input");
-  password_input.type = "password";
-  password_input.placeholder = "Пароль";
-  password_input.name = "password";
-  password.append(password_input);
-  // repeat password
-
-  let repeat_password = document.createElement("label");
-  repeat_password.innerHTML = "Повторите пароль";
-  repeat_password.htmlFor = "repeat-password";
-  let repeat_password_input = document.createElement("input");
-  repeat_password_input.type = "password";
-  repeat_password_input.placeholder = "Повторите пароль";
-  repeat_password_input.name = "repeat-password";
-  repeat_password.append(repeat_password_input);
-  // submit button
-  let button = document.createElement("button");
-  button.type = "submit";
-  button.className = "yellow-button";
-  button.innerHTML = "Зарегистрироваться";
-  form.append(email);
-  form.append(nickname);
-  form.append(password);
-  form.append(repeat_password);
-  form.append(button);
-
-  // login link
-  let login_text = document.createElement("p");
-  login_text.append(document.createElement("span"));
-  login_text.querySelector("span").innerHTML = "Уже есть аккаунт? ";
-  login_text.className = "login-text";
-  let login_link = document.createElement("button");
-  login_link.innerHTML = "Войти";
-  login_link.dataset.status = "to-login";
-  login_link.addEventListener("mouseup", () => {
-    if (login_link.dataset.status == "to-login") {
-      let popup = document.querySelector(".popup");
-      popup.querySelector("h1").innerHTML = "Вход";
-      popup.querySelector("label[for='email']").style.display = "none";
-      popup.querySelector("label[for='repeat-password']").style.display =
-        "none";
-      popup.querySelector("p span").innerHTML = "Нет аккаунта? ";
-      popup.querySelector("p button").innerHTML = "Регистрация";
-      popup.querySelector("form button").innerHTML = "Войти";
-      let forgot_password = document.createElement("p");
-      forgot_password.className = "forgot-password";
-      forgot_password.innerHTML = "Забыли пароль? ";
-      forgot_password.append(document.createElement("a"));
-      forgot_password.querySelector("a").innerHTML = "Напомнить";
-      popup.append(forgot_password);
-      form.name = "login-form";
-      login_link.dataset.status = "to-registration";
-      popup.style.left =
-        document.documentElement.clientWidth / 2 - popup.offsetWidth / 2 + "px";
-      popup.style.top =
-        document.documentElement.clientHeight / 2 -
-        popup.offsetHeight / 2 +
-        "px";
-    } else {
-      let popup = document.querySelector(".popup");
-      popup.querySelector("h1").innerHTML = "Регистрация";
-      popup.querySelector("label[for='email']").style.display = "";
-      popup.querySelector("label[for='repeat-password']").style.display = "";
-      popup.querySelector("p span").innerHTML = "Уже есть аккаунт? ";
-      popup.querySelector("p button").innerHTML = "Войти";
-      popup.querySelector("form button").innerHTML = "Зарегистрироваться";
-      form.name = "registration-form";
-      login_link.dataset.status = "to-login";
-      popup.querySelector(".forgot-password").remove();
-      popup.style.left =
-        document.documentElement.clientWidth / 2 - popup.offsetWidth / 2 + "px";
-      popup.style.top =
-        document.documentElement.clientHeight / 2 -
-        popup.offsetHeight / 2 +
-        "px";
-    }
-  });
-  login_text.append(login_link);
-  popup.append(header);
-  popup.append(form);
-  popup.append(login_text);
   // pushing it to body
   popup.style.opacity = "0";
   document.body.append(popup_bg);

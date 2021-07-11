@@ -152,20 +152,22 @@ body {
     color: #fff;
     margin-bottom: 30px;
   }
-  form {
-    display: flex;
-    flex-direction: column;
-    label {
+  div {
+    form {
       display: flex;
       flex-direction: column;
-      font-family: "Balsamiq Sans Regular";
-      font-size: 18px;
-      line-height: 22px;
-      color: #fff;
-      &:not(:last-of-type) {
-        margin-bottom: 20px;
+      label {
+        display: flex;
+        flex-direction: column;
+        font-family: "Balsamiq Sans Regular";
+        font-size: 18px;
+        line-height: 22px;
+        color: #fff;
       }
       input {
+        &:not(:last-of-type) {
+          margin-bottom: 20px;
+        }
         margin-top: 10px;
         padding: 16px 22px;
         border: none;
@@ -188,27 +190,30 @@ body {
           }
         }
       }
+      .yellow-button {
+        margin-top: 40px;
+      }
     }
-    .yellow-button {
-      margin-top: 40px;
+    p {
+      font-size: 18px;
+      font-family: "Balsamiq Sans Regular";
+      margin-top: 22px;
+      color: #fff;
+      button,
+      a {
+        text-decoration: none;
+        border: none;
+        outline: none;
+        background: transparent;
+        font-family: "Balsamiq Sans Regular";
+        font-size: 18px;
+        color: #2fa8ff;
+        cursor: pointer;
+      }
     }
   }
-  & > p {
-    font-size: 18px;
-    font-family: "Balsamiq Sans Regular";
-    margin-top: 22px;
-    color: #fff;
-    button,
-    a {
-      text-decoration: none;
-      border: none;
-      outline: none;
-      background: transparent;
-      font-family: "Balsamiq Sans Regular";
-      font-size: 18px;
-      color: #2fa8ff;
-      cursor: pointer;
-    }
+  .login {
+    display: none;
   }
   .forgot-password {
     margin-top: 5px;
