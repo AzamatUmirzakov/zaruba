@@ -91,7 +91,6 @@ function show_popup() {
     document.body.style.overflow = "";
     document.querySelector(".popup").style.opacity = "0";
     setTimeout(() => {
-      document.querySelector(".popup").remove();
       document.querySelector(".popup-bg").remove();
       for (let child of document.body.children) {
         child.style.filter = "";
@@ -144,8 +143,8 @@ function show_popup() {
 
   let popup_bg = document.createElement("div");
   popup_bg.className = "popup-bg";
-  // pushing it to body
   popup.style.opacity = "0";
+  // pushing it to body
   document.body.append(popup_bg);
   document.body.append(popup);
   popup.style.transition = "all 0.3s ease-in-out";
