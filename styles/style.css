@@ -284,6 +284,7 @@ body {
   }
   header.page-header .header-inside .header-main .header-text .download-button {
     display: inline-block;
+    text-decoration: none;
     background: transparent;
     color: #fff;
     border: none;
@@ -652,6 +653,7 @@ body {
   align-items: center;
 }
 .page-header .header-nav .nav-right .download-button {
+  display: inline-block;
   font-family: "Balsamiq Sans Regular";
   padding: 20px 32px;
   background: transparent;
@@ -663,6 +665,8 @@ body {
   height: 62px;
   font-size: 18px;
   margin-right: 27px;
+  text-decoration: none;
+  box-sizing: border-box;
 }
 .page-header .header-nav .nav-right .download-button:hover {
   cursor: pointer;

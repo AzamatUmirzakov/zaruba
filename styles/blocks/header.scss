@@ -66,6 +66,7 @@
       justify-content: space-between;
       align-items: center;
       .download-button {
+        display: inline-block;
         font-family: "Balsamiq Sans Regular";
         padding: 20px 32px;
         background: transparent;
@@ -77,6 +78,8 @@
         height: 62px;
         font-size: 18px;
         margin-right: 27px;
+        text-decoration: none;
+        box-sizing: border-box;
         &:hover {
           cursor: pointer;
         }
