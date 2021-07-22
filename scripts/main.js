@@ -90,6 +90,7 @@ function show_popup() {
   function remove_popup() {
     document.body.style.overflow = "";
     document.querySelector(".popup").style.opacity = "0";
+    document.querySelector(".popup").style.zIndex = "-10";
     setTimeout(() => {
       document.querySelector(".popup-bg").remove();
       for (let child of document.body.children) {
@@ -149,6 +150,7 @@ function show_popup() {
   document.body.append(popup);
   popup.style.transition = "all 0.3s ease-in-out";
 
+  popup.style.zIndex = "20";
   setTimeout(() => {
     popup.style.opacity = "1";
   }, 0);
