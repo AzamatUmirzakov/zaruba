@@ -133,14 +133,17 @@ function show_popup() {
 
   Array.from(document.querySelectorAll(".wave"))[1].querySelector("img").src =
     "assets/wave-bottom-blue.svg";
+  // Array.from(document.querySelectorAll(".wave"))[1].querySelector(
+  //   "img"
+  // ).style.top = "0";
 
   for (let child of document.body.children) {
     if (child.id != "unblurred") {
       child.style.filter = "blur(10px)";
-      child.style.transform = "scale(1.01)";
+      // child.style.transform = "scale(1.01)";
     }
   }
-  document.querySelector(".features").style.transform = "scale(1.1)";
+  document.querySelector(".features").style.transform = "scale(1.05)";
 
   let popup_bg = document.createElement("div");
   popup_bg.className = "popup-bg";
